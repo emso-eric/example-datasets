@@ -1,0 +1,2070 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<erddapDatasets>
+
+  <startBodyHtml5><![CDATA[
+<body>
+<table class="compact nowrap" style="width:100%; background-color:#393b3f;">
+  <tr>
+    <td style="text-align:center; width:80px;"><a rel="bookmark"
+      href="https://emso.eu/"><img
+      title="EMSO ERIC"
+      src="&erddapUrl;/images/logo.png" alt="EMSO" height="90" width="142"
+      style="vertical-align:middle;"></a></td>
+    <td style="text-align:left; font-size:x-large; color:#FFFFFF; ">
+      <strong>EMSO ERIC ERDDAP</strong>
+      <br><small><small><small>Easier access to scientific data</small></small></small>
+      </td>
+    <td style="text-align:right; font-size:small;  color:#FFFFFF; ">
+      &loginInfo; | &language; &nbsp; &nbsp;
+      <br>&BroughtToYouBy;
+      <a title="EMSO" rel="bookmark"  href="https://emso.eu/" style="color:#7C87DF;">EMSO</a>
+      &nbsp; &nbsp;
+      </td>
+  </tr>
+</table>
+]]></startBodyHtml5>
+
+  <requestBlacklist/>
+
+  <slowDownTroubleMillis>1000</slowDownTroubleMillis>
+<!-- ======== Dataset 01 configuration ========-->
+  <dataset type="EDDTableFromMultidimNcFiles" datasetID="01" active="true">
+    <reloadEveryNMinutes>10080</reloadEveryNMinutes>
+    <updateEveryNMillis>10000</updateEveryNMillis>
+    <fileDir>/datasets/01</fileDir>
+    <fileNameRegex>.*</fileNameRegex>
+    <recursive>false</recursive>
+    <pathRegex>.*</pathRegex>
+    <metadataFrom>last</metadataFrom>
+    <metadataFrom>last</metadataFrom>
+    <standardizeWhat>0</standardizeWhat>
+    <removeMVRows>true</removeMVRows>
+    <accessibleViaFiles>true</accessibleViaFiles>
+    <sortFilesBySourceNames/>
+    <fileTableInMemory>false</fileTableInMemory>
+    <addAttributes>
+      <att name="_NCProperties">null</att>
+      <att name="cdm_data_type">timeSeries</att>
+      <att name="infoUrl">https://edmo.seadatanet.org/report/2150</att>
+      <att name="sourceUrl">(local files)</att>
+      <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
+      <att name="subsetVariables">platform_id,sensor_id,depth,TEMP_QC,CNDC_QC,PRES_QC,PSAL_QC</att>
+      <att name="cdm_timeseries_variables">platform_id,sensor_id,latitude,longitude,depth</att>
+    </addAttributes>
+    <dataVariable>
+      <sourceName>time</sourceName>
+      <destinationName>time</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>depth</sourceName>
+      <destinationName>depth</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>latitude</sourceName>
+      <destinationName>latitude</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>longitude</sourceName>
+      <destinationName>longitude</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>sensor_id</sourceName>
+      <destinationName>sensor_id</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>platform_id</sourceName>
+      <destinationName>platform_id</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>TEMP</sourceName>
+      <destinationName>TEMP</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>CNDC</sourceName>
+      <destinationName>CNDC</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>PRES</sourceName>
+      <destinationName>PRES</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>PSAL</sourceName>
+      <destinationName>PSAL</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>TEMP_QC</sourceName>
+      <destinationName>TEMP_QC</destinationName>
+      <dataType>ubyte</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>CNDC_QC</sourceName>
+      <destinationName>CNDC_QC</destinationName>
+      <dataType>ubyte</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>PRES_QC</sourceName>
+      <destinationName>PRES_QC</destinationName>
+      <dataType>ubyte</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>PSAL_QC</sourceName>
+      <destinationName>PSAL_QC</destinationName>
+      <dataType>ubyte</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>SBE37SMP_SN47472_5496</sourceName>
+      <destinationName>SBE37SMP_SN47472_5496</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>OBSEA_seabed_station</sourceName>
+      <destinationName>OBSEA_seabed_station</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+  </dataset>
+  <!-- ======== Dataset 02 configuration ========-->
+  <dataset type="EDDTableFromMultidimNcFiles" datasetID="02" active="true">
+    <reloadEveryNMinutes>10080</reloadEveryNMinutes>
+    <updateEveryNMillis>10000</updateEveryNMillis>
+    <fileDir>/datasets/02</fileDir>
+    <fileNameRegex>.*</fileNameRegex>
+    <recursive>false</recursive>
+    <pathRegex>.*</pathRegex>
+    <metadataFrom>last</metadataFrom>
+    <metadataFrom>last</metadataFrom>
+    <standardizeWhat>0</standardizeWhat>
+    <removeMVRows>true</removeMVRows>
+    <accessibleViaFiles>true</accessibleViaFiles>
+    <sortFilesBySourceNames/>
+    <fileTableInMemory>false</fileTableInMemory>
+    <addAttributes>
+      <att name="_NCProperties">null</att>
+      <att name="cdm_data_type">timeSeries</att>
+      <att name="infoUrl">https://edmo.seadatanet.org/report/2150</att>
+      <att name="sourceUrl">(local files)</att>
+      <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
+      <att name="subsetVariables">platform_id,sensor_id,depth,TEMP_QC,CNDC_QC,PSAL_QC,PRES_QC</att>
+      <att name="cdm_timeseries_variables">platform_id,sensor_id,latitude,longitude,depth</att>
+    </addAttributes>
+    <dataVariable>
+      <sourceName>time</sourceName>
+      <destinationName>time</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>depth</sourceName>
+      <destinationName>depth</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>latitude</sourceName>
+      <destinationName>latitude</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>longitude</sourceName>
+      <destinationName>longitude</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>sensor_id</sourceName>
+      <destinationName>sensor_id</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>platform_id</sourceName>
+      <destinationName>platform_id</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>TEMP</sourceName>
+      <destinationName>TEMP</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>CNDC</sourceName>
+      <destinationName>CNDC</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>PSAL</sourceName>
+      <destinationName>PSAL</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>PRES</sourceName>
+      <destinationName>PRES</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>TEMP_QC</sourceName>
+      <destinationName>TEMP_QC</destinationName>
+      <dataType>ubyte</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>CNDC_QC</sourceName>
+      <destinationName>CNDC_QC</destinationName>
+      <dataType>ubyte</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>PSAL_QC</sourceName>
+      <destinationName>PSAL_QC</destinationName>
+      <dataType>ubyte</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>PRES_QC</sourceName>
+      <destinationName>PRES_QC</destinationName>
+      <dataType>ubyte</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>SBE37SMP_SN47472_5496</sourceName>
+      <destinationName>SBE37SMP_SN47472_5496</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>SBE16_SN57353_6479</sourceName>
+      <destinationName>SBE16_SN57353_6479</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>OBSEA_seabed_station</sourceName>
+      <destinationName>OBSEA_seabed_station</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+  </dataset>
+  <!-- ======== Dataset 03 configuration ========-->
+  <dataset type="EDDTableFromMultidimNcFiles" datasetID="03" active="true">
+    <reloadEveryNMinutes>10080</reloadEveryNMinutes>
+    <updateEveryNMillis>10000</updateEveryNMillis>
+    <fileDir>/datasets/03</fileDir>
+    <fileNameRegex>.*</fileNameRegex>
+    <recursive>false</recursive>
+    <pathRegex>.*</pathRegex>
+    <metadataFrom>last</metadataFrom>
+    <metadataFrom>last</metadataFrom>
+    <standardizeWhat>0</standardizeWhat>
+    <removeMVRows>true</removeMVRows>
+    <accessibleViaFiles>true</accessibleViaFiles>
+    <sortFilesBySourceNames/>
+    <fileTableInMemory>false</fileTableInMemory>
+    <addAttributes>
+      <att name="_NCProperties">null</att>
+      <att name="cdm_data_type">timeSeries</att>
+      <att name="infoUrl">https://edmo.seadatanet.org/report/2150</att>
+      <att name="sourceUrl">(local files)</att>
+      <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
+      <att name="subsetVariables">platform_id,sensor_id,depth,TEMP_QC,CNDC_QC,PRES_QC,PSAL_QC</att>
+      <att name="cdm_timeseries_variables">platform_id,sensor_id,latitude,longitude,depth</att>
+    </addAttributes>
+    <dataVariable>
+      <sourceName>time</sourceName>
+      <destinationName>time</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>depth</sourceName>
+      <destinationName>depth</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>latitude</sourceName>
+      <destinationName>latitude</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>longitude</sourceName>
+      <destinationName>longitude</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>sensor_id</sourceName>
+      <destinationName>sensor_id</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>platform_id</sourceName>
+      <destinationName>platform_id</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>TEMP</sourceName>
+      <destinationName>TEMP</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>CNDC</sourceName>
+      <destinationName>CNDC</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>PRES</sourceName>
+      <destinationName>PRES</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>PSAL</sourceName>
+      <destinationName>PSAL</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>TEMP_QC</sourceName>
+      <destinationName>TEMP_QC</destinationName>
+      <dataType>ubyte</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>CNDC_QC</sourceName>
+      <destinationName>CNDC_QC</destinationName>
+      <dataType>ubyte</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>PRES_QC</sourceName>
+      <destinationName>PRES_QC</destinationName>
+      <dataType>ubyte</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>PSAL_QC</sourceName>
+      <destinationName>PSAL_QC</destinationName>
+      <dataType>ubyte</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>SBE37SMP_SN47472_5496</sourceName>
+      <destinationName>SBE37SMP_SN47472_5496</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>SBE16_SN57353_6479</sourceName>
+      <destinationName>SBE16_SN57353_6479</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>OBSEA_seabed_station</sourceName>
+      <destinationName>OBSEA_seabed_station</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+  </dataset>
+  <!-- ======== Dataset 04 configuration ========-->
+  <dataset type="EDDTableFromMultidimNcFiles" datasetID="04" active="true">
+    <reloadEveryNMinutes>10080</reloadEveryNMinutes>
+    <updateEveryNMillis>10000</updateEveryNMillis>
+    <fileDir>/datasets/04</fileDir>
+    <fileNameRegex>.*</fileNameRegex>
+    <recursive>false</recursive>
+    <pathRegex>.*</pathRegex>
+    <metadataFrom>last</metadataFrom>
+    <metadataFrom>last</metadataFrom>
+    <standardizeWhat>0</standardizeWhat>
+    <removeMVRows>true</removeMVRows>
+    <accessibleViaFiles>true</accessibleViaFiles>
+    <sortFilesBySourceNames/>
+    <fileTableInMemory>false</fileTableInMemory>
+    <addAttributes>
+      <att name="_NCProperties">null</att>
+      <att name="cdm_data_type">timeSeries</att>
+      <att name="infoUrl">https://edmo.seadatanet.org/report/5229</att>
+      <att name="sourceUrl">(local files)</att>
+      <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
+      <att name="subsetVariables">platform_id,sensor_id,depth,TEMP_QC,CNDC_QC,PRES_QC,AIRT_QC,WSPD_QC,WDIR_QC</att>
+      <att name="cdm_timeseries_variables">platform_id,sensor_id,latitude,longitude,depth</att>
+    </addAttributes>
+    <dataVariable>
+      <sourceName>time</sourceName>
+      <destinationName>time</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>depth</sourceName>
+      <destinationName>depth</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>latitude</sourceName>
+      <destinationName>latitude</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>longitude</sourceName>
+      <destinationName>longitude</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>sensor_id</sourceName>
+      <destinationName>sensor_id</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>platform_id</sourceName>
+      <destinationName>platform_id</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>TEMP</sourceName>
+      <destinationName>TEMP</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>CNDC</sourceName>
+      <destinationName>CNDC</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>PRES</sourceName>
+      <destinationName>PRES</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>PSAL</sourceName>
+      <destinationName>PSAL</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>AIRT</sourceName>
+      <destinationName>AIRT</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>WSPD</sourceName>
+      <destinationName>WSPD</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>WDIR</sourceName>
+      <destinationName>WDIR</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>TEMP_QC</sourceName>
+      <destinationName>TEMP_QC</destinationName>
+      <dataType>ubyte</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>CNDC_QC</sourceName>
+      <destinationName>CNDC_QC</destinationName>
+      <dataType>ubyte</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>PRES_QC</sourceName>
+      <destinationName>PRES_QC</destinationName>
+      <dataType>ubyte</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>AIRT_QC</sourceName>
+      <destinationName>AIRT_QC</destinationName>
+      <dataType>ubyte</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>WSPD_QC</sourceName>
+      <destinationName>WSPD_QC</destinationName>
+      <dataType>ubyte</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>WDIR_QC</sourceName>
+      <destinationName>WDIR_QC</destinationName>
+      <dataType>ubyte</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>Airmar_200WX_SN0001</sourceName>
+      <destinationName>Airmar_200WX_SN0001</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>SBE37SMP_100</sourceName>
+      <destinationName>SBE37SMP_100</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>SBE37SMP_200</sourceName>
+      <destinationName>SBE37SMP_200</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>SBE37SMP_300</sourceName>
+      <destinationName>SBE37SMP_300</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>SBE37SMP_400</sourceName>
+      <destinationName>SBE37SMP_400</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>ODASItalia1</sourceName>
+      <destinationName>ODASItalia1</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+  </dataset>
+  <!-- ======== Dataset 05 configuration ========-->
+  <dataset type="EDDTableFromMultidimNcFiles" datasetID="05" active="true">
+    <reloadEveryNMinutes>10080</reloadEveryNMinutes>
+    <updateEveryNMillis>10000</updateEveryNMillis>
+    <fileDir>/datasets/05</fileDir>
+    <fileNameRegex>.*</fileNameRegex>
+    <recursive>false</recursive>
+    <pathRegex>.*</pathRegex>
+    <metadataFrom>last</metadataFrom>
+    <metadataFrom>last</metadataFrom>
+    <standardizeWhat>0</standardizeWhat>
+    <removeMVRows>true</removeMVRows>
+    <accessibleViaFiles>true</accessibleViaFiles>
+    <sortFilesBySourceNames/>
+    <fileTableInMemory>false</fileTableInMemory>
+    <addAttributes>
+      <att name="_NCProperties">null</att>
+      <att name="cdm_data_type">timeSeries</att>
+      <att name="infoUrl">https://edmo.seadatanet.org/report/5229</att>
+      <att name="sourceUrl">(local files)</att>
+      <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
+      <att name="subsetVariables">platform_id,sensor_id,depth,TEMP_QC,CNDC_QC,PRES_QC,PSAL_QC,AIRT_QC,WSPD_QC,WDIR_QC,precise_latitude,precise_longitude</att>
+      <att name="cdm_timeseries_variables">platform_id,sensor_id,latitude,longitude,depth</att>
+    </addAttributes>
+    <dataVariable>
+      <sourceName>time</sourceName>
+      <destinationName>time</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>depth</sourceName>
+      <destinationName>depth</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>latitude</sourceName>
+      <destinationName>latitude</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>longitude</sourceName>
+      <destinationName>longitude</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>sensor_id</sourceName>
+      <destinationName>sensor_id</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>platform_id</sourceName>
+      <destinationName>platform_id</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>precise_latitude</sourceName>
+      <destinationName>precise_latitude</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>precise_longitude</sourceName>
+      <destinationName>precise_longitude</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>TEMP</sourceName>
+      <destinationName>TEMP</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>CNDC</sourceName>
+      <destinationName>CNDC</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>PRES</sourceName>
+      <destinationName>PRES</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>PSAL</sourceName>
+      <destinationName>PSAL</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>AIRT</sourceName>
+      <destinationName>AIRT</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>WSPD</sourceName>
+      <destinationName>WSPD</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>WDIR</sourceName>
+      <destinationName>WDIR</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>TEMP_QC</sourceName>
+      <destinationName>TEMP_QC</destinationName>
+      <dataType>ubyte</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>CNDC_QC</sourceName>
+      <destinationName>CNDC_QC</destinationName>
+      <dataType>ubyte</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>PRES_QC</sourceName>
+      <destinationName>PRES_QC</destinationName>
+      <dataType>ubyte</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>PSAL_QC</sourceName>
+      <destinationName>PSAL_QC</destinationName>
+      <dataType>ubyte</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>AIRT_QC</sourceName>
+      <destinationName>AIRT_QC</destinationName>
+      <dataType>ubyte</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>WSPD_QC</sourceName>
+      <destinationName>WSPD_QC</destinationName>
+      <dataType>ubyte</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>WDIR_QC</sourceName>
+      <destinationName>WDIR_QC</destinationName>
+      <dataType>ubyte</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>Airmar_200WX_SN0001</sourceName>
+      <destinationName>Airmar_200WX_SN0001</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>SBE37SMP_SN0001</sourceName>
+      <destinationName>SBE37SMP_SN0001</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>SBE37SMP_SN0002</sourceName>
+      <destinationName>SBE37SMP_SN0002</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>SBE37SMP_SN0003</sourceName>
+      <destinationName>SBE37SMP_SN0003</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>SBE37SMP_SN0004</sourceName>
+      <destinationName>SBE37SMP_SN0004</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>ODASItalia1</sourceName>
+      <destinationName>ODASItalia1</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+  </dataset>
+  <!-- ======== Dataset 06 configuration ========-->
+  <dataset type="EDDTableFromMultidimNcFiles" datasetID="06" active="true">
+    <reloadEveryNMinutes>10080</reloadEveryNMinutes>
+    <updateEveryNMillis>10000</updateEveryNMillis>
+    <fileDir>/datasets/06</fileDir>
+    <fileNameRegex>.*</fileNameRegex>
+    <recursive>false</recursive>
+    <pathRegex>.*</pathRegex>
+    <metadataFrom>last</metadataFrom>
+    <metadataFrom>last</metadataFrom>
+    <standardizeWhat>0</standardizeWhat>
+    <removeMVRows>true</removeMVRows>
+    <accessibleViaFiles>true</accessibleViaFiles>
+    <sortFilesBySourceNames/>
+    <fileTableInMemory>false</fileTableInMemory>
+    <addAttributes>
+      <att name="_NCProperties">null</att>
+      <att name="cdm_data_type">timeSeriesProfile</att>
+      <att name="infoUrl">https://edmo.seadatanet.org/report/2150</att>
+      <att name="sourceUrl">(local files)</att>
+      <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
+      <att name="subsetVariables">platform_id,sensor_id,depth,CSPD_QC,CDIR_QC</att>
+      <att name="cdm_timeseries_variables">platform_id,latitude,longitude</att>
+      <att name="cdm_profile_variables">time,sensor_id</att>
+    </addAttributes>
+    <dataVariable>
+      <sourceName>time</sourceName>
+      <destinationName>time</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>depth</sourceName>
+      <destinationName>depth</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>latitude</sourceName>
+      <destinationName>latitude</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>longitude</sourceName>
+      <destinationName>longitude</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>sensor_id</sourceName>
+      <destinationName>sensor_id</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>platform_id</sourceName>
+      <destinationName>platform_id</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>CSPD</sourceName>
+      <destinationName>CSPD</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>CDIR</sourceName>
+      <destinationName>CDIR</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>CSPD_QC</sourceName>
+      <destinationName>CSPD_QC</destinationName>
+      <dataType>ubyte</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>CDIR_QC</sourceName>
+      <destinationName>CDIR_QC</destinationName>
+      <dataType>ubyte</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>AWAC_SN123456</sourceName>
+      <destinationName>AWAC_SN123456</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>OBSEA_seabed_station</sourceName>
+      <destinationName>OBSEA_seabed_station</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+  </dataset>
+  <!-- ======== Dataset 07 configuration ========-->
+  <dataset type="EDDTableFromMultidimNcFiles" datasetID="07" active="true">
+    <reloadEveryNMinutes>10080</reloadEveryNMinutes>
+    <updateEveryNMillis>10000</updateEveryNMillis>
+    <fileDir>/datasets/07</fileDir>
+    <fileNameRegex>.*</fileNameRegex>
+    <recursive>false</recursive>
+    <pathRegex>.*</pathRegex>
+    <metadataFrom>last</metadataFrom>
+    <metadataFrom>last</metadataFrom>
+    <standardizeWhat>0</standardizeWhat>
+    <removeMVRows>true</removeMVRows>
+    <accessibleViaFiles>true</accessibleViaFiles>
+    <sortFilesBySourceNames/>
+    <fileTableInMemory>false</fileTableInMemory>
+    <addAttributes>
+      <att name="_NCProperties">null</att>
+      <att name="cdm_data_type">timeSeriesProfile</att>
+      <att name="infoUrl">https://edmo.seadatanet.org/report/2150</att>
+      <att name="sourceUrl">(local files)</att>
+      <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
+      <att name="subsetVariables">platform_id,sensor_id,depth,CSPD_QC,CDIR_QC</att>
+      <att name="cdm_timeseries_variables">platform_id,latitude,longitude</att>
+      <att name="cdm_profile_variables">time,sensor_id</att>
+    </addAttributes>
+    <dataVariable>
+      <sourceName>time</sourceName>
+      <destinationName>time</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>depth</sourceName>
+      <destinationName>depth</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>latitude</sourceName>
+      <destinationName>latitude</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>longitude</sourceName>
+      <destinationName>longitude</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>sensor_id</sourceName>
+      <destinationName>sensor_id</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>platform_id</sourceName>
+      <destinationName>platform_id</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>CSPD</sourceName>
+      <destinationName>CSPD</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>CDIR</sourceName>
+      <destinationName>CDIR</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>CSPD_QC</sourceName>
+      <destinationName>CSPD_QC</destinationName>
+      <dataType>ubyte</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>CDIR_QC</sourceName>
+      <destinationName>CDIR_QC</destinationName>
+      <dataType>ubyte</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>AWAC_SN0001</sourceName>
+      <destinationName>AWAC_SN0001</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>AWAC_SN0002</sourceName>
+      <destinationName>AWAC_SN0002</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>OBSEA_seabed_station</sourceName>
+      <destinationName>OBSEA_seabed_station</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+  </dataset>
+  <!-- ======== Dataset 08 configuration ========-->
+  <dataset type="EDDTableFromMultidimNcFiles" datasetID="08" active="true">
+    <reloadEveryNMinutes>10080</reloadEveryNMinutes>
+    <updateEveryNMillis>10000</updateEveryNMillis>
+    <fileDir>/datasets/08</fileDir>
+    <fileNameRegex>.*</fileNameRegex>
+    <recursive>false</recursive>
+    <pathRegex>.*</pathRegex>
+    <metadataFrom>last</metadataFrom>
+    <metadataFrom>last</metadataFrom>
+    <standardizeWhat>0</standardizeWhat>
+    <removeMVRows>true</removeMVRows>
+    <accessibleViaFiles>true</accessibleViaFiles>
+    <sortFilesBySourceNames/>
+    <fileTableInMemory>false</fileTableInMemory>
+    <addAttributes>
+      <att name="_NCProperties">null</att>
+      <att name="cdm_data_type">trajectory</att>
+      <att name="infoUrl">https://edmo.seadatanet.org/report/2150</att>
+      <att name="sourceUrl">(local files)</att>
+      <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
+      <att name="subsetVariables">platform_id,sensor_id,TEMP_QC,CNDC_QC,PRES_QC,PSAL_QC</att>
+      <att name="cdm_trajectory_variables">platform_id</att>
+    </addAttributes>
+    <dataVariable>
+      <sourceName>time</sourceName>
+      <destinationName>time</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>depth</sourceName>
+      <destinationName>depth</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>latitude</sourceName>
+      <destinationName>latitude</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>longitude</sourceName>
+      <destinationName>longitude</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>sensor_id</sourceName>
+      <destinationName>sensor_id</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>platform_id</sourceName>
+      <destinationName>platform_id</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>TEMP</sourceName>
+      <destinationName>TEMP</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>CNDC</sourceName>
+      <destinationName>CNDC</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>PRES</sourceName>
+      <destinationName>PRES</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>PSAL</sourceName>
+      <destinationName>PSAL</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>TEMP_QC</sourceName>
+      <destinationName>TEMP_QC</destinationName>
+      <dataType>ubyte</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>CNDC_QC</sourceName>
+      <destinationName>CNDC_QC</destinationName>
+      <dataType>ubyte</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>PRES_QC</sourceName>
+      <destinationName>PRES_QC</destinationName>
+      <dataType>ubyte</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>PSAL_QC</sourceName>
+      <destinationName>PSAL_QC</destinationName>
+      <dataType>ubyte</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>SBE37SMP_SN47472_5496</sourceName>
+      <destinationName>SBE37SMP_SN47472_5496</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>Girona500_SN0001</sourceName>
+      <destinationName>Girona500_SN0001</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+  </dataset>
+  <!-- ======== Dataset 09 configuration ========-->
+  <dataset type="EDDTableFromMultidimNcFiles" datasetID="09" active="true">
+    <reloadEveryNMinutes>10080</reloadEveryNMinutes>
+    <updateEveryNMillis>10000</updateEveryNMillis>
+    <fileDir>/datasets/09</fileDir>
+    <fileNameRegex>.*</fileNameRegex>
+    <recursive>false</recursive>
+    <pathRegex>.*</pathRegex>
+    <metadataFrom>last</metadataFrom>
+    <metadataFrom>last</metadataFrom>
+    <standardizeWhat>0</standardizeWhat>
+    <removeMVRows>true</removeMVRows>
+    <accessibleViaFiles>true</accessibleViaFiles>
+    <sortFilesBySourceNames/>
+    <fileTableInMemory>false</fileTableInMemory>
+    <addAttributes>
+      <att name="_NCProperties">null</att>
+      <att name="cdm_data_type">trajectory</att>
+      <att name="infoUrl">https://edmo.seadatanet.org/report/2150</att>
+      <att name="sourceUrl">(local files)</att>
+      <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
+      <att name="subsetVariables">platform_id,sensor_id,TEMP_QC,CNDC_QC,PRES_QC,PSAL_QC</att>
+      <att name="cdm_trajectory_variables">platform_id</att>
+    </addAttributes>
+    <dataVariable>
+      <sourceName>time</sourceName>
+      <destinationName>time</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>depth</sourceName>
+      <destinationName>depth</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>latitude</sourceName>
+      <destinationName>latitude</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>longitude</sourceName>
+      <destinationName>longitude</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>sensor_id</sourceName>
+      <destinationName>sensor_id</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>platform_id</sourceName>
+      <destinationName>platform_id</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>TEMP</sourceName>
+      <destinationName>TEMP</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>CNDC</sourceName>
+      <destinationName>CNDC</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>PRES</sourceName>
+      <destinationName>PRES</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>PSAL</sourceName>
+      <destinationName>PSAL</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>TEMP_QC</sourceName>
+      <destinationName>TEMP_QC</destinationName>
+      <dataType>ubyte</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>CNDC_QC</sourceName>
+      <destinationName>CNDC_QC</destinationName>
+      <dataType>ubyte</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>PRES_QC</sourceName>
+      <destinationName>PRES_QC</destinationName>
+      <dataType>ubyte</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>PSAL_QC</sourceName>
+      <destinationName>PSAL_QC</destinationName>
+      <dataType>ubyte</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>SBE37SMP_SN47472_5496</sourceName>
+      <destinationName>SBE37SMP_SN47472_5496</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>SBE16_SN57353_6479</sourceName>
+      <destinationName>SBE16_SN57353_6479</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>Girona500_SN0001</sourceName>
+      <destinationName>Girona500_SN0001</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>Sparus_II_AUV_SN0001</sourceName>
+      <destinationName>Sparus_II_AUV_SN0001</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+  </dataset>
+  <!-- ======== Dataset 10 configuration ========-->
+  <dataset type="EDDTableFromMultidimNcFiles" datasetID="10" active="true">
+    <reloadEveryNMinutes>10080</reloadEveryNMinutes>
+    <updateEveryNMillis>10000</updateEveryNMillis>
+    <fileDir>/datasets/10</fileDir>
+    <fileNameRegex>.*</fileNameRegex>
+    <recursive>false</recursive>
+    <pathRegex>.*</pathRegex>
+    <metadataFrom>last</metadataFrom>
+    <metadataFrom>last</metadataFrom>
+    <standardizeWhat>0</standardizeWhat>
+    <removeMVRows>true</removeMVRows>
+    <accessibleViaFiles>true</accessibleViaFiles>
+    <sortFilesBySourceNames/>
+    <fileTableInMemory>false</fileTableInMemory>
+    <addAttributes>
+      <att name="_NCProperties">null</att>
+      <att name="cdm_data_type">trajectory</att>
+      <att name="infoUrl">https://edmo.seadatanet.org/report/2150</att>
+      <att name="sourceUrl">(local files)</att>
+      <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
+      <att name="subsetVariables">platform_id,sensor_id,CSPD_QC,CDIR_QC</att>
+      <att name="cdm_trajectory_variables">platform_id</att>
+    </addAttributes>
+    <dataVariable>
+      <sourceName>time</sourceName>
+      <destinationName>time</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>depth</sourceName>
+      <destinationName>depth</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>latitude</sourceName>
+      <destinationName>latitude</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>longitude</sourceName>
+      <destinationName>longitude</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>sensor_id</sourceName>
+      <destinationName>sensor_id</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>platform_id</sourceName>
+      <destinationName>platform_id</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>CSPD</sourceName>
+      <destinationName>CSPD</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>CDIR</sourceName>
+      <destinationName>CDIR</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>CSPD_QC</sourceName>
+      <destinationName>CSPD_QC</destinationName>
+      <dataType>ubyte</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>CDIR_QC</sourceName>
+      <destinationName>CDIR_QC</destinationName>
+      <dataType>ubyte</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>AWAC_SN123456</sourceName>
+      <destinationName>AWAC_SN123456</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>SailBuoy_SN0001</sourceName>
+      <destinationName>SailBuoy_SN0001</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+  </dataset>
+  <!-- ======== Dataset 11 configuration ========-->
+  <dataset type="EDDTableFromMultidimNcFiles" datasetID="11" active="true">
+    <reloadEveryNMinutes>10080</reloadEveryNMinutes>
+    <updateEveryNMillis>10000</updateEveryNMillis>
+    <fileDir>/datasets/11</fileDir>
+    <fileNameRegex>.*</fileNameRegex>
+    <recursive>false</recursive>
+    <pathRegex>.*</pathRegex>
+    <metadataFrom>last</metadataFrom>
+    <metadataFrom>last</metadataFrom>
+    <standardizeWhat>0</standardizeWhat>
+    <removeMVRows>true</removeMVRows>
+    <accessibleViaFiles>true</accessibleViaFiles>
+    <sortFilesBySourceNames/>
+    <fileTableInMemory>false</fileTableInMemory>
+    <addAttributes>
+      <att name="_NCProperties">null</att>
+      <att name="cdm_data_type">timeSeries</att>
+      <att name="infoUrl">https://edmo.seadatanet.org/report/2150</att>
+      <att name="sourceUrl">(local files)</att>
+      <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
+      <att name="subsetVariables">platform_id,sensor_id,depth</att>
+      <att name="cdm_timeseries_variables">platform_id,sensor_id,latitude,longitude,depth</att>
+    </addAttributes>
+    <dataVariable>
+      <sourceName>time</sourceName>
+      <destinationName>time</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>depth</sourceName>
+      <destinationName>depth</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>latitude</sourceName>
+      <destinationName>latitude</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>longitude</sourceName>
+      <destinationName>longitude</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>sensor_id</sourceName>
+      <destinationName>sensor_id</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>platform_id</sourceName>
+      <destinationName>platform_id</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>associatedMedia</sourceName>
+      <destinationName>associatedMedia</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>scientificName</sourceName>
+      <destinationName>scientificName</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>scientificNameID</sourceName>
+      <destinationName>scientificNameID</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>confidence</sourceName>
+      <destinationName>confidence</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>bbox</sourceName>
+      <destinationName>bbox</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>identificationVerificationStatus</sourceName>
+      <destinationName>identificationVerificationStatus</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>basisOfRecord</sourceName>
+      <destinationName>basisOfRecord</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>IPC608_SN0001</sourceName>
+      <destinationName>IPC608_SN0001</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>OBSEA_seabed_station</sourceName>
+      <destinationName>OBSEA_seabed_station</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+  </dataset>
+  <!-- ======== Dataset 12 configuration ========-->
+  <dataset type="EDDTableFromMultidimNcFiles" datasetID="12" active="true">
+    <reloadEveryNMinutes>10080</reloadEveryNMinutes>
+    <updateEveryNMillis>10000</updateEveryNMillis>
+    <fileDir>/datasets/12</fileDir>
+    <fileNameRegex>.*</fileNameRegex>
+    <recursive>false</recursive>
+    <pathRegex>.*</pathRegex>
+    <metadataFrom>last</metadataFrom>
+    <metadataFrom>last</metadataFrom>
+    <standardizeWhat>0</standardizeWhat>
+    <removeMVRows>true</removeMVRows>
+    <accessibleViaFiles>true</accessibleViaFiles>
+    <sortFilesBySourceNames/>
+    <fileTableInMemory>false</fileTableInMemory>
+    <addAttributes>
+      <att name="_NCProperties">null</att>
+      <att name="cdm_data_type">timeSeries</att>
+      <att name="infoUrl">https://edmo.seadatanet.org/report/2150</att>
+      <att name="sourceUrl">(local files)</att>
+      <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
+      <att name="subsetVariables">platform_id,sensor_id,depth</att>
+      <att name="cdm_timeseries_variables">platform_id,sensor_id,latitude,longitude,depth</att>
+    </addAttributes>
+    <dataVariable>
+      <sourceName>time</sourceName>
+      <destinationName>time</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>depth</sourceName>
+      <destinationName>depth</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>latitude</sourceName>
+      <destinationName>latitude</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>longitude</sourceName>
+      <destinationName>longitude</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>sensor_id</sourceName>
+      <destinationName>sensor_id</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>platform_id</sourceName>
+      <destinationName>platform_id</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>NOYS</sourceName>
+      <destinationName>NOYS</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>NAXYS_SN0010</sourceName>
+      <destinationName>NAXYS_SN0010</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>OBSEA_seabed_station</sourceName>
+      <destinationName>OBSEA_seabed_station</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+  </dataset>
+  <!-- ======== Dataset 13 configuration ========-->
+  <dataset type="EDDTableFromMultidimNcFiles" datasetID="13" active="true">
+    <reloadEveryNMinutes>10080</reloadEveryNMinutes>
+    <updateEveryNMillis>10000</updateEveryNMillis>
+    <fileDir>/datasets/13</fileDir>
+    <fileNameRegex>.*</fileNameRegex>
+    <recursive>false</recursive>
+    <pathRegex>.*</pathRegex>
+    <metadataFrom>last</metadataFrom>
+    <metadataFrom>last</metadataFrom>
+    <standardizeWhat>0</standardizeWhat>
+    <removeMVRows>true</removeMVRows>
+    <accessibleViaFiles>true</accessibleViaFiles>
+    <sortFilesBySourceNames/>
+    <fileTableInMemory>false</fileTableInMemory>
+    <addAttributes>
+      <att name="_NCProperties">null</att>
+      <att name="cdm_data_type">timeSeries</att>
+      <att name="infoUrl">https://edmo.seadatanet.org/report/2150</att>
+      <att name="sourceUrl">(local files)</att>
+      <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
+      <att name="subsetVariables">platform_id,sensor_id,depth,DEPTH_QC,TIME_QC,POSITION_QC,TEMP_QC,CNDC_QC,PRES_QC,PSAL_QC,precise_latitude,precise_longitude</att>
+      <att name="cdm_timeseries_variables">platform_id,sensor_id,latitude,longitude,depth</att>
+    </addAttributes>
+    <dataVariable>
+      <sourceName>TIME</sourceName>
+      <destinationName>time</destinationName>
+      <dataType>float</dataType>
+      <addAttributes>
+        <att name="ancillary_variables">TIME_QC</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>DEPTH</sourceName>
+      <destinationName>depth</destinationName>
+      <dataType>float</dataType>
+      <addAttributes>
+        <att name="ancillary_variables">DEPTH_QC</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>nominal_latitude</sourceName>
+      <destinationName>latitude</destinationName>
+      <dataType>float</dataType>
+      <addAttributes>
+        <att name="standard_name">latitude</att>
+        <att name="units">degrees_north</att>
+        <att name="variable_type">coordinates</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>nominal_longitude</sourceName>
+      <destinationName>longitude</destinationName>
+      <dataType>float</dataType>
+      <addAttributes>
+        <att name="standard_name">longitude</att>
+        <att name="units">degrees_east</att>
+        <att name="variable_type">coordinates</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>SENSOR_ID</sourceName>
+      <destinationName>sensor_id</destinationName>
+      <dataType>float</dataType>
+      <addAttributes>
+        <att name="variable_type">coordinates</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>platform_id</sourceName>
+      <destinationName>platform_id</destinationName>
+      <dataType>String</dataType>
+      <addAttributes>
+        <att name="variable_type">coordinates</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>LATITUDE</sourceName>
+      <destinationName>precise_latitude</destinationName>
+      <dataType>float</dataType>
+      <addAttributes>
+        <att name="standard_name">deployment_latitude</att>
+        <att name="ancillary_variables">POSITION_QC</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>LONGITUDE</sourceName>
+      <destinationName>precise_longitude</destinationName>
+      <dataType>float</dataType>
+      <addAttributes>
+        <att name="standard_name">deployment_longitude</att>
+        <att name="ancillary_variables">POSITION_QC</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>TEMP</sourceName>
+      <destinationName>TEMP</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>CNDC</sourceName>
+      <destinationName>CNDC</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>PRES</sourceName>
+      <destinationName>PRES</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>PSAL</sourceName>
+      <destinationName>PSAL</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>DEPTH_QC</sourceName>
+      <destinationName>DEPTH_QC</destinationName>
+      <dataType>ubyte</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>TIME_QC</sourceName>
+      <destinationName>TIME_QC</destinationName>
+      <dataType>ubyte</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>POSITION_QC</sourceName>
+      <destinationName>POSITION_QC</destinationName>
+      <dataType>ubyte</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>TEMP_QC</sourceName>
+      <destinationName>TEMP_QC</destinationName>
+      <dataType>ubyte</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>CNDC_QC</sourceName>
+      <destinationName>CNDC_QC</destinationName>
+      <dataType>ubyte</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>PRES_QC</sourceName>
+      <destinationName>PRES_QC</destinationName>
+      <dataType>ubyte</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>PSAL_QC</sourceName>
+      <destinationName>PSAL_QC</destinationName>
+      <dataType>ubyte</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>SBE16_SN57353_6479</sourceName>
+      <destinationName>SBE16_SN57353_6479</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>OBSEA_seabed_station</sourceName>
+      <destinationName>OBSEA_seabed_station</destinationName>
+      <dataType>String</dataType>
+      <addAttributes/>
+    </dataVariable>
+  </dataset>
+  <!-- ======== Dataset 14 configuration ========-->
+  <dataset type="EDDTableFromMultidimNcFiles" datasetID="14" active="true">
+  <reloadEveryNMinutes>10080</reloadEveryNMinutes>
+  <updateEveryNMillis>10000</updateEveryNMillis>
+  <fileDir>/datasets/14</fileDir>
+  <fileNameRegex>.*</fileNameRegex>
+  <recursive>false</recursive>
+  <pathRegex>.*</pathRegex>
+  <metadataFrom>last</metadataFrom>
+  <metadataFrom>last</metadataFrom>
+  <standardizeWhat>0</standardizeWhat>
+  <removeMVRows>true</removeMVRows>
+  <accessibleViaFiles>true</accessibleViaFiles>
+  <sortFilesBySourceNames/>
+  <fileTableInMemory>false</fileTableInMemory>
+  <addAttributes>
+    <att name="_NCProperties">null</att>
+    <att name="cdm_data_type">timeSeries</att>
+    <att name="infoUrl">https://edmo.seadatanet.org/report/5229</att>
+    <att name="sourceUrl">(local files)</att>
+    <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
+    <att name="subsetVariables">platform_id,sensor_id,depth,TIME_QC,POSITION_QC,DEPTH_QC,TEMP_QC,precise_latitude,precise_longitude</att>
+    <att name="cdm_timeseries_variables">platform_id,sensor_id,latitude,longitude,depth</att>
+    <att name="title">Example 14: Setup a EMSO-compliant dataset from Copernicus-like files</att>
+    <att name="summary">Example 14: Setup a EMSO-compliant dataset from Copernicus-like files. Source files from W1M3A have been slightly modified to convert the sensor_id to a string (instead of a numerical variable) and some variables have been removed</att>
+    <att name="treatDimensionsAs">LATITUDE,LONGITUDE,TIME</att>
+    <att name="contributors">Bart Simpson, Peter Griffin, Rick Sánchez</att>
+    <att name="contributor_types">DataCollector DataManager Researcher</att>
+    <att name="emso_regional_facility_name">Western Mediterranean Sea</att>
+    <att name="emso_regional_facility_uri">https://w3id.org/earthsemantics/OSO#Western_Mediterranean_Sea</att>
+    <att name="emso_site_name">W1M3A</att>
+    <att name="emso_site_uri">https://w3id.org/earthsemantics/OSO#W1M3A</att>
+  </addAttributes>
+  <dataVariable>
+    <sourceName>TIME</sourceName>
+    <destinationName>time</destinationName>
+    <dataType>float</dataType>
+    <addAttributes>
+      <att name="variable_type">coordinate</att>
+    </addAttributes>
+  </dataVariable>
+  <dataVariable>
+    <sourceName>DEPTH</sourceName>
+    <destinationName>depth</destinationName>
+    <dataType>float</dataType>
+    <addAttributes>
+      <att name="variable_type">coordinate</att>
+    </addAttributes>
+  </dataVariable>
+  <dataVariable>
+    <sourceName>nominal_latitude</sourceName>
+    <destinationName>latitude</destinationName>
+    <dataType>float</dataType>
+    <addAttributes>
+      <att name="standard_name">latitude</att>
+      <att name="variable_type">coordinate</att>
+      <att name="sdn_parameter_uri">https://vocab.nerc.ac.uk/collection/P01/current/ALATZZ01</att>
+      <att name="sdn_parameter_name">Latitude north</att>
+      <att name="sdn_parameter_urn">SDN:P01::ALATZZ01</att>
+      <att name="sdn_uom_uri">http://vocab.nerc.ac.uk/collection/P06/current/UAAA/</att>
+      <att name="sdn_uom_urn">SDN:P06::UAAA/</att>
+      <att name="sdn_uom_name">Degrees</att>
+      <att name="units">degrees_north</att>
+    </addAttributes>
+  </dataVariable>
+  <dataVariable>
+    <sourceName>nominal_longitude</sourceName>
+    <destinationName>longitude</destinationName>
+    <dataType>float</dataType>
+    <addAttributes>
+      <att name="standard_name">longitude</att>
+      <att name="variable_type">coordinate</att>
+      <att name="long_name">longitude of measurements</att>
+      <att name="sdn_parameter_uri">https://vocab.nerc.ac.uk/collection/P01/current/ALONZZ01</att>
+      <att name="sdn_uom_uri">http://vocab.nerc.ac.uk/collection/P06/current/UAAA/</att>
+      <att name="sdn_parameter_urn">SDN:P01::ALONZZ01</att>
+      <att name="sdn_parameter_name">Longitude east</att>
+      <att name="sdn_uom_urn">SDN:P06::UAAA</att>
+      <att name="sdn_uom_name">Degrees</att>
+      <att name="units">degrees_east</att>
+    </addAttributes>
+  </dataVariable>
+  <dataVariable>
+    <sourceName>sensor_id</sourceName>
+    <destinationName>sensor_id</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="variable_type">coordinate</att>
+      <att name="long_name">Identifier of the sensor that took the measurement</att>
+      <att name="sdn_parameter_uri">https://vocab.nerc.ac.uk/collection/P01/current/NMSPINST/</att>
+      <att name="sdn_parameter_urn">SDN:P01::NMSPINST</att>
+      <att name="sdn_parameter_name">Name of sampling instrument</att>
+    </addAttributes>
+  </dataVariable>
+  <dataVariable>
+    <sourceName>platform_id</sourceName>
+    <destinationName>platform_id</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="cf_role">timeseries_id</att>
+      <att name="long_name">Platform where the sensors were deployed</att>
+      <att name="variable_type">coordinate</att>
+      <att name="sdn_parameter_uri">https://vocab.nerc.ac.uk/collection/P01/current/NMSPPF01/</att>
+      <att name="sdn_parameter_urn">SDN:P01::NMSPPF01</att>
+      <att name="sdn_parameter_name">Name of sampling platform</att>
+      <att name="standard_name">platform_id</att>
+    </addAttributes>
+  </dataVariable>
+  <dataVariable>
+    <sourceName>LATITUDE</sourceName>
+    <destinationName>precise_latitude</destinationName>
+    <dataType>float</dataType>
+    <addAttributes>
+      <att name="standard_name">deployment_latitude</att>
+      <att name="variable_type">coordinate</att>
+      <att name="sdn_parameter_uri">https://vocab.nerc.ac.uk/collection/P01/current/ALONZZ01</att>
+      <att name="sdn_uom_uri">http://vocab.nerc.ac.uk/collection/P06/current/UAAA/</att>
+      <att name="units">degrees_east</att>
+      <att name="sdn_parameter_urn">SDN:P01::ALONZZ01</att>
+      <att name="sdn_parameter_name">Longitude east</att>
+      <att name="sdn_uom_urn">SDN:P06::UAAA</att>
+      <att name="sdn_uom_name">Degrees</att>
+    </addAttributes>
+  </dataVariable>
+  <dataVariable>
+    <sourceName>LONGITUDE</sourceName>
+    <destinationName>precise_longitude</destinationName>
+    <dataType>float</dataType>
+    <addAttributes>
+      <att name="standard_name">deployment_longitude</att>
+      <att name="variable_type">coordinate</att>
+    </addAttributes>
+  </dataVariable>
+  <dataVariable>
+    <sourceName>TEMP</sourceName>
+    <destinationName>TEMP</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="variable_type">environmental</att>
+      <att name="units">degC</att>
+    </addAttributes>
+  </dataVariable>
+  <dataVariable>
+    <sourceName>CNDC</sourceName>
+    <destinationName>CNDC</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="variable_type">environmental</att>
+      <att name="units">S/m</att>
+    </addAttributes>
+  </dataVariable>
+  <dataVariable>
+    <sourceName>CNDC_QC</sourceName>
+    <destinationName>CNDC_QC</destinationName>
+    <dataType>ubyte</dataType>
+    <addAttributes>
+      <att name="variable_type">quality_control</att>
+      <att name="flag_values">0 1 2 3 4 5 6 7 8 9</att>
+      <att name="flag_meanings">unknown good_data probably_good_data potentially_correctable_bad_data bad_data nominal_value interpolated_value missing_value</att>
+    </addAttributes>
+  </dataVariable>
+  <dataVariable>
+    <sourceName>PRES</sourceName>
+    <destinationName>PRES</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="variable_type">environmental</att>
+      <att name="units">dbar</att>
+    </addAttributes>
+  </dataVariable>
+  <dataVariable>
+    <sourceName>PRES_QC</sourceName>
+    <destinationName>PRES_QC</destinationName>
+    <dataType>ubyte</dataType>
+    <addAttributes>
+      <att name="variable_type">quality_control</att>
+      <att name="flag_values">0 1 2 3 4 5 6 7 8 9</att>
+      <att name="flag_meanings">unknown good_data probably_good_data potentially_correctable_bad_data bad_data nominal_value interpolated_value missing_value</att>
+    </addAttributes>
+  </dataVariable>
+  <dataVariable>
+    <sourceName>DRYT</sourceName>
+    <destinationName>DRYT</destinationName>
+    <dataType>double</dataType>
+    <addAttributes>
+      <att name="variable_type">environmental</att>
+      <att name="units">degC</att>
+    </addAttributes>
+  </dataVariable>
+  <dataVariable>
+    <sourceName>DRYT_QC</sourceName>
+    <destinationName>DRYT_QC</destinationName>
+    <dataType>ubyte</dataType>
+    <addAttributes>
+      <att name="variable_type">quality_control</att>
+      <att name="flag_values">0 1 2 3 4 5 6 7 8 9</att>
+      <att name="flag_meanings">unknown good_data probably_good_data potentially_correctable_bad_data bad_data nominal_value interpolated_value missing_value</att>
+    </addAttributes>
+  </dataVariable>
+  <dataVariable>
+    <sourceName>TIME_QC</sourceName>
+    <destinationName>TIME_QC</destinationName>
+    <dataType>ubyte</dataType>
+    <addAttributes>
+      <att name="variable_type">quality_control</att>
+      <att name="flag_values">0 1 2 3 4 5 6 7 8 9</att>
+      <att name="flag_meanings">unknown good_data probably_good_data potentially_correctable_bad_data bad_data nominal_value interpolated_value missing_value</att>
+    </addAttributes>
+  </dataVariable>
+  <dataVariable>
+    <sourceName>POSITION_QC</sourceName>
+    <destinationName>POSITION_QC</destinationName>
+    <dataType>ubyte</dataType>
+    <addAttributes>
+      <att name="variable_type">quality_control</att>
+      <att name="flag_values">0 1 2 3 4 5 6 7 8 9</att>
+      <att name="flag_meanings">unknown good_data probably_good_data potentially_correctable_bad_data bad_data nominal_value interpolated_value missing_value</att>
+    </addAttributes>
+  </dataVariable>
+  <dataVariable>
+    <sourceName>DEPTH_QC</sourceName>
+    <destinationName>DEPTH_QC</destinationName>
+    <dataType>ubyte</dataType>
+    <addAttributes>
+      <att name="variable_type">quality_control</att>
+      <att name="flag_values">0 1 2 3 4 5 6 7 8 9</att>
+      <att name="flag_meanings">unknown good_data probably_good_data potentially_correctable_bad_data bad_data nominal_value interpolated_value missing_value</att>
+    </addAttributes>
+  </dataVariable>
+  <dataVariable>
+    <sourceName>TEMP_QC</sourceName>
+    <destinationName>TEMP_QC</destinationName>
+    <dataType>ubyte</dataType>
+    <addAttributes>
+      <att name="variable_type">quality_control</att>
+      <att name="flag_values">0 1 2 3 4 5 6 7 8 9</att>
+      <att name="flag_meanings">unknown good_data probably_good_data potentially_correctable_bad_data bad_data nominal_value interpolated_value missing_value</att>
+    </addAttributes>
+  </dataVariable>
+  <dataVariable>
+    <sourceName>Vaisala_HMP155_SNR0230167</sourceName>
+    <destinationName>Vaisala_HMP155_SNR0230167</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="variable_type">sensor</att>
+      <att name="long_name">Vaisala HMP155 hygrometer series</att>
+      <att name="sdn_instrument_name">Vaisala HMP155 hygrometer series</att>
+      <att name="sdn_instrument_uri">http://vocab.nerc.ac.uk/collection/L22/current/TOOL1673/</att>
+      <att name="sdn_instrument_urn">SDN:L22::TOOL1673</att>
+      <att name="sensor_manufacturer_name">Vaisala</att>
+      <att name="sensor_manufacturer_uri">http://vocab.nerc.ac.uk/collection/L35/current/MAN0025/</att>
+      <att name="sensor_manufacturer_urn">SDN:L35::MAN0025</att>
+      <att name="sensor_SeaVoX_L22_code">SDN:L22::TOOL1673</att>
+      <att name="sensor_mount">mounted_on_surface_buoy</att>
+      <att name="sensor_type_uri">http://vocab.nerc.ac.uk/collection/L05/current/130/</att>
+      <att name="sensor_type_urn">SDN:L05::102</att>
+      <att name="sensor_type_name">meteorological packages</att>
+      <att name="sensor_reference">http://vocab.nerc.ac.uk/collection/L22/current/TOOL1673/</att>
+      <att name="sensor_serial_number">R0230167</att>
+      <att name="sensor_id">Vaisala_HMP155_SNR0230167</att>
+    </addAttributes>
+  </dataVariable>
+  <dataVariable>
+    <sourceName>SBE37sm_SN37_1234</sourceName>
+    <destinationName>SBE37sm_SN37_1234</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="variable_type">sensor</att>
+      <att name="long_name">Sea-Bird SBE 37 MicroCat CTP (submersible) CTD sensor series</att>
+      <att name="sensor_model">Sea-Bird SBE 37 MicroCat CTP (submersible) CTD sensor series</att>
+      <att name="sensor_manufacturer_name">Sea-Bird Scientific</att>
+      <att name="sensor_manufacturer_uri">http://vocab.nerc.ac.uk/collection/L35/current/MAN0013/</att>
+      <att name="sensor_manufacturer_urn">SDN:L35::MAN0013</att>
+      <att name="sensor_type_uri">http://vocab.nerc.ac.uk/collection/L05/current/130/</att>
+      <att name="sensor_type_urn">SDN:L05::130</att>
+      <att name="sensor_type_name">CTD</att>
+      <att name="sdn_instrument_name">Sea-Bird SBE 37 MicroCat CTP (submersible) CTD sensor series</att>
+      <att name="sdn_instrument_uri">http://vocab.nerc.ac.uk/collection/L22/current/TOOL1393/</att>
+      <att name="sdn_instrument_urn">SDN:L22::TOOL1393</att>
+      <att name="sensor_SeaVoX_L22_code">SDN:L22::TOOL1393</att>
+      <att name="sensor_reference">http://vocab.nerc.ac.uk/collection/L22/current/TOOL1393/</att>
+      <att name="sensor_serial_number">37-1234</att>
+      <att name="sensor_id">SBE37sm_SN37_1234</att>
+      <att name="sensor_mount">mounted_on_mooring_line</att>
+      <att name="sensor_orientation">upward</att>
+    </addAttributes>
+  </dataVariable>
+  <dataVariable>
+    <sourceName>SBE16plusv2_SN16_50265</sourceName>
+    <destinationName>SBE16plusv2_SN16_50265</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="variable_type">sensor</att>
+      <att name="long_name">Sea-Bird SBE 16Plus V2 SEACAT C-T Recorder</att>
+      <att name="sensor_manufacturer_name">Sea-Bird Scientific</att>
+      <att name="sensor_manufacturer_uri">http://vocab.nerc.ac.uk/collection/L35/current/MAN0013/</att>
+      <att name="sensor_manufacturer_urn">SDN:L35::MAN0013</att>
+      <att name="sensor_type_uri">http://vocab.nerc.ac.uk/collection/L05/current/130/</att>
+      <att name="sensor_type_urn">SDN:L05::130</att>
+      <att name="sensor_type_name">CTD</att>
+      <att name="sensor_reference">http://vocab.nerc.ac.uk/collection/L22/current/TOOL0870/</att>
+      <att name="sdn_instrument_uri">http://vocab.nerc.ac.uk/collection/L22/current/TOOL0870/</att>
+      <att name="sdn_instrument_urn">SDN:L22::TOOL0870</att>
+      <att name="sensor_SeaVoX_L22_code">SDN:L22::TOOL0870</att>
+      <att name="sdn_instrument_name">Sea-Bird SBE 16Plus V2 SEACAT C-T Recorder</att>
+      <att name="sensor_serial_number">16-50265</att>
+      <att name="sensor_id">SBE16plusv2_SN16_50265</att>
+      <att name="sensor_mount">mounted_on_mooring_line</att>
+      <att name="sensor_orientation">upward</att>
+    </addAttributes>
+  </dataVariable>
+  <dataVariable>
+    <sourceName>SBE37sm_SN37_5669</sourceName>
+    <destinationName>SBE37sm_SN37_5669</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="variable_type">sensor</att>
+      <att name="long_name">Sea-Bird SBE 37 MicroCat CTP (submersible) CTD sensor series</att>
+      <att name="sdn_instrument_name">Sea-Bird SBE 37 MicroCat CTP (submersible) CTD sensor series</att>
+      <att name="sdn_instrument_uri">http://vocab.nerc.ac.uk/collection/L22/current/TOOL1393/</att>
+      <att name="sdn_instrument_urn">SDN:L22::TOOL1393</att>
+      <att name="sensor_SeaVoX_L22_code">SDN:L22::TOOL1393</att>
+      <att name="sensor_manufacturer_name">Sea-Bird Scientific</att>
+      <att name="sensor_manufacturer_uri">http://vocab.nerc.ac.uk/collection/L35/current/MAN0013/</att>
+      <att name="sensor_manufacturer_urn">SDN:L35::MAN0013</att>
+      <att name="sensor_reference">http://vocab.nerc.ac.uk/collection/L22/current/TOOL1393/</att>
+      <att name="sensor_type_uri">http://vocab.nerc.ac.uk/collection/L05/current/130/</att>
+      <att name="sensor_type_urn">SDN:L05::130</att>
+      <att name="sensor_type_name">CTD</att>
+      <att name="sensor_serial_number">37-5669</att>
+      <att name="sensor_id">SBE37sm_SN37_5669</att>
+      <att name="sensor_mount">mounted_on_mooring_line</att>
+      <att name="sensor_orientation">upward</att>
+    </addAttributes>
+  </dataVariable>
+  <dataVariable>
+    <sourceName>SBE37sm_SN37_22592</sourceName>
+    <destinationName>SBE37sm_SN37_22592</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="variable_type">sensor</att>
+      <att name="long_name">Sea-Bird SBE 37 MicroCat CTP (submersible) CTD sensor series</att>
+      <att name="sdn_instrument_name">Sea-Bird SBE 37 MicroCat CTP (submersible) CTD sensor series</att>
+      <att name="sdn_instrument_uri">http://vocab.nerc.ac.uk/collection/L22/current/TOOL1393/</att>
+      <att name="sdn_instrument_urn">SDN:L22::TOOL1393</att>
+      <att name="sensor_SeaVoX_L22_code">SDN:L22::TOOL1393</att>
+      <att name="sensor_manufacturer_name">Sea-Bird Scientific</att>
+      <att name="sensor_manufacturer_uri">http://vocab.nerc.ac.uk/collection/L35/current/MAN0013/</att>
+      <att name="sensor_manufacturer_urn">SDN:L35::MAN0013</att>
+      <att name="sensor_type_uri">http://vocab.nerc.ac.uk/collection/L05/current/130/</att>
+      <att name="sensor_type_urn">SDN:L05::130</att>
+      <att name="sensor_type_name">CTD</att>
+      <att name="sensor_reference">http://vocab.nerc.ac.uk/collection/L22/current/TOOL1393/</att>
+      <att name="sensor_serial_number">37-22592</att>
+      <att name="sensor_id">SBE37sm_SN37_22592</att>
+      <att name="sensor_mount">mounted_on_mooring_line</att>
+      <att name="sensor_orientation">upward</att>
+    </addAttributes>
+  </dataVariable>
+  <dataVariable>
+    <sourceName>ODASItalia1</sourceName>
+    <destinationName>ODASItalia1</destinationName>
+    <dataType>String</dataType>
+    <addAttributes>
+      <att name="variable_type">platform</att>
+      <att name="long_name">ODASItalia1</att>
+      <att name="wmo_platform_code">6103675</att>
+      <att name="emso_platform_name">ODAS Italia 1</att>
+      <att name="emso_platform_uri">https://w3id.org/earthsemantics/OSO#ODASItalia1</att>
+      <att name="platform_type_name">mooring</att>
+      <att name="platform_type_uri">http://vocab.nerc.ac.uk/collection/L06/current/48/</att>
+      <att name="platform_type_urn">SDN:L06::48</att>
+      <att name="platform_reference">http://www.w1m3a.cnr.it</att>
+      <att name="platform_id">ODASItalia1</att>
+    </addAttributes>
+  </dataVariable>
+</dataset>
+</erddapDatasets>
