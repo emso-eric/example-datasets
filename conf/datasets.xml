@@ -1,33 +1,91 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <erddapDatasets>
+  <!-- GENERAL INFORMATION
+The information in this file specifies which datasets your ERDDAP will serve.
+The initial version of this file has a few examples which should work for you.
+But after your initial experiments with ERDDAP,
+you should replace them with information for your datasets.
 
-  <startBodyHtml5><![CDATA[
-<body>
-<table class="compact nowrap" style="width:100%; background-color:#393b3f;">
-  <tr>
-    <td style="text-align:center; width:80px;"><a rel="bookmark"
-      href="https://emso.eu/"><img
-      title="EMSO ERIC"
-      src="&erddapUrl;/images/logo.png" alt="EMSO" height="90" width="142"
-      style="vertical-align:middle;"></a></td>
-    <td style="text-align:left; font-size:x-large; color:#FFFFFF; ">
-      <strong>EMSO ERIC ERDDAP</strong>
-      <br><small><small><small>Easier access to scientific data</small></small></small>
-      </td>
-    <td style="text-align:right; font-size:small;  color:#FFFFFF; ">
-      &loginInfo; | &language; &nbsp; &nbsp;
-      <br>&BroughtToYouBy;
-      <a title="EMSO" rel="bookmark"  href="https://emso.eu/" style="color:#7C87DF;">EMSO</a>
-      &nbsp; &nbsp;
-      </td>
-  </tr>
-</table>
-]]></startBodyHtml5>
+You can change this document (e.g., add datasets, change metadata) while ERDDAP is running.
+The changes will be detected the next time this document is read
+(as often as setup.xml loadDatasetsMinMinutes).
 
+Each dataset has a reloadEveryNMinutes value (default = 10080 (one week)).
+When this document is reread, datasets that haven't been been reloaded in
+their reloadEveryNMinutes will be reloaded.
+You only need to specify a reloadEveryNMinutes value if you anticipate that
+the dataset will change periodically.
+
+If this document has an xml error, processing will stop and an email
+will be sent to emailEverythingTo as specified in setup.xml.
+
+If you want to remove a dataset while ERDDAP is running, add
+	active="false"
+to the dataset tag.  For example,
+	<dataset type="EDDGridFromDap" datasetID="erdMHchla8day" active="false">
+
+For more information, see
+http://coastwatch.pfel.noaa.gov/erddap/download/setupDatasetsXml.html
+-->
+  <!-- If you want to refuse requests from certain clients
+(e.g., to fend off a Denial of Service attack or an overly zealous web robot),
+add their numeric IP address (e.g., 123.45.67.89) to this comma-separated list.
+You can also replace the last number in an IP address with * to block 0-255 (e.g., 123.45.67.*).
+See your ERDDAP daily report for a list/tally of the most active requesters. -->
   <requestBlacklist/>
-
+  <!-- Blacklisted IP addresses often have troublesome scripts that make
+rapid-fire, repeated, bad requests.
+With this setting, you can slow down the response to blacklisted IP addresses
+or other failed requests by some number of milliseconds.
+Recommendations:
+* If the trouble is a Distributed Denial Of Service (DDOS) attack from 100+
+attackers, set this to a smaller number (0? 10? 100?).
+Slowing them all down for too long leads to too many waiting threads.
+* If the trouble is from 1-10 sources, set this to 1000 ms (the default).
+That slows them down so they waste fewer network resources.
+Also, 1000 ms won't annoy human users who make a bad request.
+-->
   <slowDownTroubleMillis>1000</slowDownTroubleMillis>
-<!-- ======== Dataset 01 configuration ========-->
+  <startBodyHtml5>
+&lt;body&gt;
+&lt;table class="compact nowrap" style="width:100%; background-color:#393b3f;"&gt;
+  &lt;tr&gt;
+    &lt;td style="text-align:center; width:80px;"&gt;&lt;a rel="bookmark"
+      href="https://emso.eu/"&gt;&lt;img
+      title="EMSO ERIC"
+      src="&amp;erddapUrl;/images/logo.png" alt="EMSO" height="90" width="142"
+      style="vertical-align:middle;"&gt;&lt;/a&gt;&lt;/td&gt;
+    &lt;td style="text-align:left; font-size:x-large; color:#a7be58; "&gt;
+      &lt;strong&gt;EMSO ERIC Example Datasets&lt;/strong&gt;
+      &lt;br&gt;&lt;small&gt;&lt;small&gt;&lt;small&gt;Easier access to scientific data&lt;/small&gt;&lt;/small&gt;&lt;/small&gt;
+      &lt;/td&gt;
+    &lt;td style="text-align:right; font-size:small;  color:#FFFFFF; "&gt;
+      &amp;loginInfo; | &amp;language; &amp;nbsp; &amp;nbsp;
+      &lt;br&gt;&amp;BroughtToYouBy;
+      &lt;a title="EMSO" rel="bookmark"  href="https://emso.eu/" style="color:#7C87DF;"&gt;EMSO&lt;/a&gt;
+      &amp;nbsp; &amp;nbsp;
+      &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</startBodyHtml5>
+  <theShortDescriptionHtml>
+    &lt;h1&gt;EMSO Dataset Examples&lt;/h1&gt;
+
+    &lt;div&gt;
+        &lt;p&gt;This page contains a set of dataset examples following the &lt;a href="https://github.com/emso-eric/emso-metadata-specifications/tree/develop"&gt;EMSO Metadata Specifications&lt;/a&gt;. These examples demonstrate proper metadata formatting and structure for EMSO data products, ensuring consistency and interoperability across the research infrastructure.&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;div&gt;
+        &lt;h2&gt;Useful Links&lt;/h2&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;&lt;/strong&gt; &lt;a href="https://github.com/emso-eric/emso-metadata-specifications/tree/develop" target="_blank"&gt;EMSO Metadata Specifications&lt;/a&gt;: The normative document with the rules on how to create EMSO-compliant NetCDF and ERDDAP datasets&lt;/li&gt;
+            &lt;li&gt;&lt;a href="https://github.com/emso-eric/metadata-harmonizer/tree/develop" target="_blank"&gt;Metadata Harmonizer Toolbox&lt;/a&gt;: contains several tools o creates and evaluate NetCDF datasets in compliance with EMSO Metadata Specifications. It also includes tools to integrate NetCDF files into an ERDDAP server&lt;/li&gt;
+            &lt;li&gt;&lt;a href="https://github.com/emso-eric/example-datasets" target="_blank"&gt;Configuration of this ERDDAP server&lt;/a&gt;: Contains all the configuration and datasets shown in this page. &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+
+    </theShortDescriptionHtml>
+  <!-- ======== Dataset 01 configuration ========-->
   <dataset type="EDDTableFromMultidimNcFiles" datasetID="01" active="true">
     <reloadEveryNMinutes>10080</reloadEveryNMinutes>
     <updateEveryNMillis>10000</updateEveryNMillis>
@@ -1692,9 +1750,386 @@
   </dataset>
   <!-- ======== Dataset 14 configuration ========-->
   <dataset type="EDDTableFromMultidimNcFiles" datasetID="14" active="true">
+    <reloadEveryNMinutes>10080</reloadEveryNMinutes>
+    <updateEveryNMillis>10000</updateEveryNMillis>
+    <fileDir>/datasets/14</fileDir>
+    <fileNameRegex>.*</fileNameRegex>
+    <recursive>false</recursive>
+    <pathRegex>.*</pathRegex>
+    <metadataFrom>last</metadataFrom>
+    <metadataFrom>last</metadataFrom>
+    <standardizeWhat>0</standardizeWhat>
+    <removeMVRows>true</removeMVRows>
+    <accessibleViaFiles>true</accessibleViaFiles>
+    <sortFilesBySourceNames/>
+    <fileTableInMemory>false</fileTableInMemory>
+    <addAttributes>
+      <att name="_NCProperties">null</att>
+      <att name="cdm_data_type">timeSeries</att>
+      <att name="infoUrl">https://edmo.seadatanet.org/report/5229</att>
+      <att name="sourceUrl">(local files)</att>
+      <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
+      <att name="subsetVariables">platform_id,sensor_id,depth,TIME_QC,POSITION_QC,DEPTH_QC,TEMP_QC,precise_latitude,precise_longitude</att>
+      <att name="cdm_timeseries_variables">platform_id,sensor_id,latitude,longitude,depth</att>
+      <att name="title">Example 14: Setup a EMSO-compliant dataset from Copernicus-like files</att>
+      <att name="summary">Example 14: Setup a EMSO-compliant dataset from Copernicus-like files. Source files from W1M3A have been slightly modified to convert the sensor_id to a string (instead of a numerical variable) and some variables have been removed</att>
+      <att name="treatDimensionsAs">LATITUDE,LONGITUDE,TIME</att>
+      <att name="contributors">Bart Simpson, Peter Griffin, Rick Sánchez</att>
+      <att name="contributor_types">DataCollector DataManager Researcher</att>
+      <att name="emso_regional_facility_name">Western Mediterranean Sea</att>
+      <att name="emso_regional_facility_uri">https://w3id.org/earthsemantics/OSO#Western_Mediterranean_Sea</att>
+      <att name="emso_site_name">W1M3A</att>
+      <att name="emso_site_uri">https://w3id.org/earthsemantics/OSO#W1M3A</att>
+    </addAttributes>
+    <dataVariable>
+      <sourceName>TIME</sourceName>
+      <destinationName>time</destinationName>
+      <dataType>float</dataType>
+      <addAttributes>
+        <att name="variable_type">coordinate</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>DEPTH</sourceName>
+      <destinationName>depth</destinationName>
+      <dataType>float</dataType>
+      <addAttributes>
+        <att name="variable_type">coordinate</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>nominal_latitude</sourceName>
+      <destinationName>latitude</destinationName>
+      <dataType>float</dataType>
+      <addAttributes>
+        <att name="standard_name">latitude</att>
+        <att name="variable_type">coordinate</att>
+        <att name="sdn_parameter_uri">https://vocab.nerc.ac.uk/collection/P01/current/ALATZZ01</att>
+        <att name="sdn_parameter_name">Latitude north</att>
+        <att name="sdn_parameter_urn">SDN:P01::ALATZZ01</att>
+        <att name="sdn_uom_uri">http://vocab.nerc.ac.uk/collection/P06/current/UAAA/</att>
+        <att name="sdn_uom_urn">SDN:P06::UAAA/</att>
+        <att name="sdn_uom_name">Degrees</att>
+        <att name="units">degrees_north</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>nominal_longitude</sourceName>
+      <destinationName>longitude</destinationName>
+      <dataType>float</dataType>
+      <addAttributes>
+        <att name="standard_name">longitude</att>
+        <att name="variable_type">coordinate</att>
+        <att name="long_name">longitude of measurements</att>
+        <att name="sdn_parameter_uri">https://vocab.nerc.ac.uk/collection/P01/current/ALONZZ01</att>
+        <att name="sdn_uom_uri">http://vocab.nerc.ac.uk/collection/P06/current/UAAA/</att>
+        <att name="sdn_parameter_urn">SDN:P01::ALONZZ01</att>
+        <att name="sdn_parameter_name">Longitude east</att>
+        <att name="sdn_uom_urn">SDN:P06::UAAA</att>
+        <att name="sdn_uom_name">Degrees</att>
+        <att name="units">degrees_east</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>sensor_id</sourceName>
+      <destinationName>sensor_id</destinationName>
+      <dataType>String</dataType>
+      <addAttributes>
+        <att name="variable_type">coordinate</att>
+        <att name="long_name">Identifier of the sensor that took the measurement</att>
+        <att name="sdn_parameter_uri">https://vocab.nerc.ac.uk/collection/P01/current/NMSPINST/</att>
+        <att name="sdn_parameter_urn">SDN:P01::NMSPINST</att>
+        <att name="sdn_parameter_name">Name of sampling instrument</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>platform_id</sourceName>
+      <destinationName>platform_id</destinationName>
+      <dataType>String</dataType>
+      <addAttributes>
+        <att name="cf_role">timeseries_id</att>
+        <att name="long_name">Platform where the sensors were deployed</att>
+        <att name="variable_type">coordinate</att>
+        <att name="sdn_parameter_uri">https://vocab.nerc.ac.uk/collection/P01/current/NMSPPF01/</att>
+        <att name="sdn_parameter_urn">SDN:P01::NMSPPF01</att>
+        <att name="sdn_parameter_name">Name of sampling platform</att>
+        <att name="standard_name">platform_id</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>LATITUDE</sourceName>
+      <destinationName>precise_latitude</destinationName>
+      <dataType>float</dataType>
+      <addAttributes>
+        <att name="standard_name">deployment_latitude</att>
+        <att name="variable_type">coordinate</att>
+        <att name="sdn_parameter_uri">https://vocab.nerc.ac.uk/collection/P01/current/ALONZZ01</att>
+        <att name="sdn_uom_uri">http://vocab.nerc.ac.uk/collection/P06/current/UAAA/</att>
+        <att name="units">degrees_east</att>
+        <att name="sdn_parameter_urn">SDN:P01::ALONZZ01</att>
+        <att name="sdn_parameter_name">Longitude east</att>
+        <att name="sdn_uom_urn">SDN:P06::UAAA</att>
+        <att name="sdn_uom_name">Degrees</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>LONGITUDE</sourceName>
+      <destinationName>precise_longitude</destinationName>
+      <dataType>float</dataType>
+      <addAttributes>
+        <att name="standard_name">deployment_longitude</att>
+        <att name="variable_type">coordinate</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>TEMP</sourceName>
+      <destinationName>TEMP</destinationName>
+      <dataType>double</dataType>
+      <addAttributes>
+        <att name="variable_type">environmental</att>
+        <att name="units">degC</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>CNDC</sourceName>
+      <destinationName>CNDC</destinationName>
+      <dataType>double</dataType>
+      <addAttributes>
+        <att name="variable_type">environmental</att>
+        <att name="units">S/m</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>CNDC_QC</sourceName>
+      <destinationName>CNDC_QC</destinationName>
+      <dataType>ubyte</dataType>
+      <addAttributes>
+        <att name="variable_type">quality_control</att>
+        <att name="flag_values">0 1 2 3 4 5 6 7 8 9</att>
+        <att name="flag_meanings">unknown good_data probably_good_data potentially_correctable_bad_data bad_data nominal_value interpolated_value missing_value</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>PRES</sourceName>
+      <destinationName>PRES</destinationName>
+      <dataType>double</dataType>
+      <addAttributes>
+        <att name="variable_type">environmental</att>
+        <att name="units">dbar</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>PRES_QC</sourceName>
+      <destinationName>PRES_QC</destinationName>
+      <dataType>ubyte</dataType>
+      <addAttributes>
+        <att name="variable_type">quality_control</att>
+        <att name="flag_values">0 1 2 3 4 5 6 7 8 9</att>
+        <att name="flag_meanings">unknown good_data probably_good_data potentially_correctable_bad_data bad_data nominal_value interpolated_value missing_value</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>DRYT</sourceName>
+      <destinationName>DRYT</destinationName>
+      <dataType>double</dataType>
+      <addAttributes>
+        <att name="variable_type">environmental</att>
+        <att name="units">degC</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>DRYT_QC</sourceName>
+      <destinationName>DRYT_QC</destinationName>
+      <dataType>ubyte</dataType>
+      <addAttributes>
+        <att name="variable_type">quality_control</att>
+        <att name="flag_values">0 1 2 3 4 5 6 7 8 9</att>
+        <att name="flag_meanings">unknown good_data probably_good_data potentially_correctable_bad_data bad_data nominal_value interpolated_value missing_value</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>TIME_QC</sourceName>
+      <destinationName>TIME_QC</destinationName>
+      <dataType>ubyte</dataType>
+      <addAttributes>
+        <att name="variable_type">quality_control</att>
+        <att name="flag_values">0 1 2 3 4 5 6 7 8 9</att>
+        <att name="flag_meanings">unknown good_data probably_good_data potentially_correctable_bad_data bad_data nominal_value interpolated_value missing_value</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>POSITION_QC</sourceName>
+      <destinationName>POSITION_QC</destinationName>
+      <dataType>ubyte</dataType>
+      <addAttributes>
+        <att name="variable_type">quality_control</att>
+        <att name="flag_values">0 1 2 3 4 5 6 7 8 9</att>
+        <att name="flag_meanings">unknown good_data probably_good_data potentially_correctable_bad_data bad_data nominal_value interpolated_value missing_value</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>DEPTH_QC</sourceName>
+      <destinationName>DEPTH_QC</destinationName>
+      <dataType>ubyte</dataType>
+      <addAttributes>
+        <att name="variable_type">quality_control</att>
+        <att name="flag_values">0 1 2 3 4 5 6 7 8 9</att>
+        <att name="flag_meanings">unknown good_data probably_good_data potentially_correctable_bad_data bad_data nominal_value interpolated_value missing_value</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>TEMP_QC</sourceName>
+      <destinationName>TEMP_QC</destinationName>
+      <dataType>ubyte</dataType>
+      <addAttributes>
+        <att name="variable_type">quality_control</att>
+        <att name="flag_values">0 1 2 3 4 5 6 7 8 9</att>
+        <att name="flag_meanings">unknown good_data probably_good_data potentially_correctable_bad_data bad_data nominal_value interpolated_value missing_value</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>Vaisala_HMP155_SNR0230167</sourceName>
+      <destinationName>Vaisala_HMP155_SNR0230167</destinationName>
+      <dataType>String</dataType>
+      <addAttributes>
+        <att name="variable_type">sensor</att>
+        <att name="long_name">Vaisala HMP155 hygrometer series</att>
+        <att name="sdn_instrument_name">Vaisala HMP155 hygrometer series</att>
+        <att name="sdn_instrument_uri">http://vocab.nerc.ac.uk/collection/L22/current/TOOL1673/</att>
+        <att name="sdn_instrument_urn">SDN:L22::TOOL1673</att>
+        <att name="sensor_manufacturer_name">Vaisala</att>
+        <att name="sensor_manufacturer_uri">http://vocab.nerc.ac.uk/collection/L35/current/MAN0025/</att>
+        <att name="sensor_manufacturer_urn">SDN:L35::MAN0025</att>
+        <att name="sensor_SeaVoX_L22_code">SDN:L22::TOOL1673</att>
+        <att name="sensor_mount">mounted_on_surface_buoy</att>
+        <att name="sensor_type_uri">http://vocab.nerc.ac.uk/collection/L05/current/130/</att>
+        <att name="sensor_type_urn">SDN:L05::102</att>
+        <att name="sensor_type_name">meteorological packages</att>
+        <att name="sensor_reference">http://vocab.nerc.ac.uk/collection/L22/current/TOOL1673/</att>
+        <att name="sensor_serial_number">R0230167</att>
+        <att name="sensor_id">Vaisala_HMP155_SNR0230167</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>SBE37sm_SN37_1234</sourceName>
+      <destinationName>SBE37sm_SN37_1234</destinationName>
+      <dataType>String</dataType>
+      <addAttributes>
+        <att name="variable_type">sensor</att>
+        <att name="long_name">Sea-Bird SBE 37 MicroCat CTP (submersible) CTD sensor series</att>
+        <att name="sensor_model">Sea-Bird SBE 37 MicroCat CTP (submersible) CTD sensor series</att>
+        <att name="sensor_manufacturer_name">Sea-Bird Scientific</att>
+        <att name="sensor_manufacturer_uri">http://vocab.nerc.ac.uk/collection/L35/current/MAN0013/</att>
+        <att name="sensor_manufacturer_urn">SDN:L35::MAN0013</att>
+        <att name="sensor_type_uri">http://vocab.nerc.ac.uk/collection/L05/current/130/</att>
+        <att name="sensor_type_urn">SDN:L05::130</att>
+        <att name="sensor_type_name">CTD</att>
+        <att name="sdn_instrument_name">Sea-Bird SBE 37 MicroCat CTP (submersible) CTD sensor series</att>
+        <att name="sdn_instrument_uri">http://vocab.nerc.ac.uk/collection/L22/current/TOOL1393/</att>
+        <att name="sdn_instrument_urn">SDN:L22::TOOL1393</att>
+        <att name="sensor_SeaVoX_L22_code">SDN:L22::TOOL1393</att>
+        <att name="sensor_reference">http://vocab.nerc.ac.uk/collection/L22/current/TOOL1393/</att>
+        <att name="sensor_serial_number">37-1234</att>
+        <att name="sensor_id">SBE37sm_SN37_1234</att>
+        <att name="sensor_mount">mounted_on_mooring_line</att>
+        <att name="sensor_orientation">upward</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>SBE16plusv2_SN16_50265</sourceName>
+      <destinationName>SBE16plusv2_SN16_50265</destinationName>
+      <dataType>String</dataType>
+      <addAttributes>
+        <att name="variable_type">sensor</att>
+        <att name="long_name">Sea-Bird SBE 16Plus V2 SEACAT C-T Recorder</att>
+        <att name="sensor_manufacturer_name">Sea-Bird Scientific</att>
+        <att name="sensor_manufacturer_uri">http://vocab.nerc.ac.uk/collection/L35/current/MAN0013/</att>
+        <att name="sensor_manufacturer_urn">SDN:L35::MAN0013</att>
+        <att name="sensor_type_uri">http://vocab.nerc.ac.uk/collection/L05/current/130/</att>
+        <att name="sensor_type_urn">SDN:L05::130</att>
+        <att name="sensor_type_name">CTD</att>
+        <att name="sensor_reference">http://vocab.nerc.ac.uk/collection/L22/current/TOOL0870/</att>
+        <att name="sdn_instrument_uri">http://vocab.nerc.ac.uk/collection/L22/current/TOOL0870/</att>
+        <att name="sdn_instrument_urn">SDN:L22::TOOL0870</att>
+        <att name="sensor_SeaVoX_L22_code">SDN:L22::TOOL0870</att>
+        <att name="sdn_instrument_name">Sea-Bird SBE 16Plus V2 SEACAT C-T Recorder</att>
+        <att name="sensor_serial_number">16-50265</att>
+        <att name="sensor_id">SBE16plusv2_SN16_50265</att>
+        <att name="sensor_mount">mounted_on_mooring_line</att>
+        <att name="sensor_orientation">upward</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>SBE37sm_SN37_5669</sourceName>
+      <destinationName>SBE37sm_SN37_5669</destinationName>
+      <dataType>String</dataType>
+      <addAttributes>
+        <att name="variable_type">sensor</att>
+        <att name="long_name">Sea-Bird SBE 37 MicroCat CTP (submersible) CTD sensor series</att>
+        <att name="sdn_instrument_name">Sea-Bird SBE 37 MicroCat CTP (submersible) CTD sensor series</att>
+        <att name="sdn_instrument_uri">http://vocab.nerc.ac.uk/collection/L22/current/TOOL1393/</att>
+        <att name="sdn_instrument_urn">SDN:L22::TOOL1393</att>
+        <att name="sensor_SeaVoX_L22_code">SDN:L22::TOOL1393</att>
+        <att name="sensor_manufacturer_name">Sea-Bird Scientific</att>
+        <att name="sensor_manufacturer_uri">http://vocab.nerc.ac.uk/collection/L35/current/MAN0013/</att>
+        <att name="sensor_manufacturer_urn">SDN:L35::MAN0013</att>
+        <att name="sensor_reference">http://vocab.nerc.ac.uk/collection/L22/current/TOOL1393/</att>
+        <att name="sensor_type_uri">http://vocab.nerc.ac.uk/collection/L05/current/130/</att>
+        <att name="sensor_type_urn">SDN:L05::130</att>
+        <att name="sensor_type_name">CTD</att>
+        <att name="sensor_serial_number">37-5669</att>
+        <att name="sensor_id">SBE37sm_SN37_5669</att>
+        <att name="sensor_mount">mounted_on_mooring_line</att>
+        <att name="sensor_orientation">upward</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>SBE37sm_SN37_22592</sourceName>
+      <destinationName>SBE37sm_SN37_22592</destinationName>
+      <dataType>String</dataType>
+      <addAttributes>
+        <att name="variable_type">sensor</att>
+        <att name="long_name">Sea-Bird SBE 37 MicroCat CTP (submersible) CTD sensor series</att>
+        <att name="sdn_instrument_name">Sea-Bird SBE 37 MicroCat CTP (submersible) CTD sensor series</att>
+        <att name="sdn_instrument_uri">http://vocab.nerc.ac.uk/collection/L22/current/TOOL1393/</att>
+        <att name="sdn_instrument_urn">SDN:L22::TOOL1393</att>
+        <att name="sensor_SeaVoX_L22_code">SDN:L22::TOOL1393</att>
+        <att name="sensor_manufacturer_name">Sea-Bird Scientific</att>
+        <att name="sensor_manufacturer_uri">http://vocab.nerc.ac.uk/collection/L35/current/MAN0013/</att>
+        <att name="sensor_manufacturer_urn">SDN:L35::MAN0013</att>
+        <att name="sensor_type_uri">http://vocab.nerc.ac.uk/collection/L05/current/130/</att>
+        <att name="sensor_type_urn">SDN:L05::130</att>
+        <att name="sensor_type_name">CTD</att>
+        <att name="sensor_reference">http://vocab.nerc.ac.uk/collection/L22/current/TOOL1393/</att>
+        <att name="sensor_serial_number">37-22592</att>
+        <att name="sensor_id">SBE37sm_SN37_22592</att>
+        <att name="sensor_mount">mounted_on_mooring_line</att>
+        <att name="sensor_orientation">upward</att>
+      </addAttributes>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>ODASItalia1</sourceName>
+      <destinationName>ODASItalia1</destinationName>
+      <dataType>String</dataType>
+      <addAttributes>
+        <att name="variable_type">platform</att>
+        <att name="long_name">ODASItalia1</att>
+        <att name="wmo_platform_code">6103675</att>
+        <att name="emso_platform_name">ODAS Italia 1</att>
+        <att name="emso_platform_uri">https://w3id.org/earthsemantics/OSO#ODASItalia1</att>
+        <att name="platform_type_name">mooring</att>
+        <att name="platform_type_uri">http://vocab.nerc.ac.uk/collection/L06/current/48/</att>
+        <att name="platform_type_urn">SDN:L06::48</att>
+        <att name="platform_reference">http://www.w1m3a.cnr.it</att>
+        <att name="platform_id">ODASItalia1</att>
+      </addAttributes>
+    </dataVariable>
+  </dataset>
+  <!-- ======== Dataset 15 configuration ========-->
+  <dataset type="EDDTableFromMultidimNcFiles" datasetID="15" active="true">
   <reloadEveryNMinutes>10080</reloadEveryNMinutes>
   <updateEveryNMillis>10000</updateEveryNMillis>
-  <fileDir>/datasets/14</fileDir>
+  <fileDir>/datasets/15</fileDir>
   <fileNameRegex>.*</fileNameRegex>
   <recursive>false</recursive>
   <pathRegex>.*</pathRegex>
@@ -1708,363 +2143,113 @@
   <addAttributes>
     <att name="_NCProperties">null</att>
     <att name="cdm_data_type">timeSeries</att>
-    <att name="infoUrl">https://edmo.seadatanet.org/report/5229</att>
+    <att name="infoUrl">https://edmo.seadatanet.org/report/2150</att>
     <att name="sourceUrl">(local files)</att>
     <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
-    <att name="subsetVariables">platform_id,sensor_id,depth,TIME_QC,POSITION_QC,DEPTH_QC,TEMP_QC,precise_latitude,precise_longitude</att>
+    <att name="subsetVariables">platform_id,sensor_id,depth,TEMP_QC,CNDC_QC,PSAL_QC,PRES_QC</att>
     <att name="cdm_timeseries_variables">platform_id,sensor_id,latitude,longitude,depth</att>
-    <att name="title">Example 14: Setup a EMSO-compliant dataset from Copernicus-like files</att>
-    <att name="summary">Example 14: Setup a EMSO-compliant dataset from Copernicus-like files. Source files from W1M3A have been slightly modified to convert the sensor_id to a string (instead of a numerical variable) and some variables have been removed</att>
-    <att name="treatDimensionsAs">LATITUDE,LONGITUDE,TIME</att>
-    <att name="contributors">Bart Simpson, Peter Griffin, Rick Sánchez</att>
-    <att name="contributor_types">DataCollector DataManager Researcher</att>
-    <att name="emso_regional_facility_name">Western Mediterranean Sea</att>
-    <att name="emso_regional_facility_uri">https://w3id.org/earthsemantics/OSO#Western_Mediterranean_Sea</att>
-    <att name="emso_site_name">W1M3A</att>
-    <att name="emso_site_uri">https://w3id.org/earthsemantics/OSO#W1M3A</att>
   </addAttributes>
   <dataVariable>
-    <sourceName>TIME</sourceName>
+    <sourceName>time</sourceName>
     <destinationName>time</destinationName>
-    <dataType>float</dataType>
-    <addAttributes>
-      <att name="variable_type">coordinate</att>
-    </addAttributes>
+    <dataType>double</dataType>
+    <addAttributes/>
   </dataVariable>
   <dataVariable>
-    <sourceName>DEPTH</sourceName>
+    <sourceName>depth</sourceName>
     <destinationName>depth</destinationName>
-    <dataType>float</dataType>
-    <addAttributes>
-      <att name="variable_type">coordinate</att>
-    </addAttributes>
+    <dataType>double</dataType>
+    <addAttributes/>
   </dataVariable>
   <dataVariable>
-    <sourceName>nominal_latitude</sourceName>
+    <sourceName>latitude</sourceName>
     <destinationName>latitude</destinationName>
-    <dataType>float</dataType>
-    <addAttributes>
-      <att name="standard_name">latitude</att>
-      <att name="variable_type">coordinate</att>
-      <att name="sdn_parameter_uri">https://vocab.nerc.ac.uk/collection/P01/current/ALATZZ01</att>
-      <att name="sdn_parameter_name">Latitude north</att>
-      <att name="sdn_parameter_urn">SDN:P01::ALATZZ01</att>
-      <att name="sdn_uom_uri">http://vocab.nerc.ac.uk/collection/P06/current/UAAA/</att>
-      <att name="sdn_uom_urn">SDN:P06::UAAA/</att>
-      <att name="sdn_uom_name">Degrees</att>
-      <att name="units">degrees_north</att>
-    </addAttributes>
+    <dataType>double</dataType>
+    <addAttributes/>
   </dataVariable>
   <dataVariable>
-    <sourceName>nominal_longitude</sourceName>
+    <sourceName>longitude</sourceName>
     <destinationName>longitude</destinationName>
-    <dataType>float</dataType>
-    <addAttributes>
-      <att name="standard_name">longitude</att>
-      <att name="variable_type">coordinate</att>
-      <att name="long_name">longitude of measurements</att>
-      <att name="sdn_parameter_uri">https://vocab.nerc.ac.uk/collection/P01/current/ALONZZ01</att>
-      <att name="sdn_uom_uri">http://vocab.nerc.ac.uk/collection/P06/current/UAAA/</att>
-      <att name="sdn_parameter_urn">SDN:P01::ALONZZ01</att>
-      <att name="sdn_parameter_name">Longitude east</att>
-      <att name="sdn_uom_urn">SDN:P06::UAAA</att>
-      <att name="sdn_uom_name">Degrees</att>
-      <att name="units">degrees_east</att>
-    </addAttributes>
+    <dataType>double</dataType>
+    <addAttributes/>
   </dataVariable>
   <dataVariable>
     <sourceName>sensor_id</sourceName>
     <destinationName>sensor_id</destinationName>
     <dataType>String</dataType>
-    <addAttributes>
-      <att name="variable_type">coordinate</att>
-      <att name="long_name">Identifier of the sensor that took the measurement</att>
-      <att name="sdn_parameter_uri">https://vocab.nerc.ac.uk/collection/P01/current/NMSPINST/</att>
-      <att name="sdn_parameter_urn">SDN:P01::NMSPINST</att>
-      <att name="sdn_parameter_name">Name of sampling instrument</att>
-    </addAttributes>
+    <addAttributes/>
   </dataVariable>
   <dataVariable>
     <sourceName>platform_id</sourceName>
     <destinationName>platform_id</destinationName>
     <dataType>String</dataType>
-    <addAttributes>
-      <att name="cf_role">timeseries_id</att>
-      <att name="long_name">Platform where the sensors were deployed</att>
-      <att name="variable_type">coordinate</att>
-      <att name="sdn_parameter_uri">https://vocab.nerc.ac.uk/collection/P01/current/NMSPPF01/</att>
-      <att name="sdn_parameter_urn">SDN:P01::NMSPPF01</att>
-      <att name="sdn_parameter_name">Name of sampling platform</att>
-      <att name="standard_name">platform_id</att>
-    </addAttributes>
-  </dataVariable>
-  <dataVariable>
-    <sourceName>LATITUDE</sourceName>
-    <destinationName>precise_latitude</destinationName>
-    <dataType>float</dataType>
-    <addAttributes>
-      <att name="standard_name">deployment_latitude</att>
-      <att name="variable_type">coordinate</att>
-      <att name="sdn_parameter_uri">https://vocab.nerc.ac.uk/collection/P01/current/ALONZZ01</att>
-      <att name="sdn_uom_uri">http://vocab.nerc.ac.uk/collection/P06/current/UAAA/</att>
-      <att name="units">degrees_east</att>
-      <att name="sdn_parameter_urn">SDN:P01::ALONZZ01</att>
-      <att name="sdn_parameter_name">Longitude east</att>
-      <att name="sdn_uom_urn">SDN:P06::UAAA</att>
-      <att name="sdn_uom_name">Degrees</att>
-    </addAttributes>
-  </dataVariable>
-  <dataVariable>
-    <sourceName>LONGITUDE</sourceName>
-    <destinationName>precise_longitude</destinationName>
-    <dataType>float</dataType>
-    <addAttributes>
-      <att name="standard_name">deployment_longitude</att>
-      <att name="variable_type">coordinate</att>
-    </addAttributes>
+    <addAttributes/>
   </dataVariable>
   <dataVariable>
     <sourceName>TEMP</sourceName>
     <destinationName>TEMP</destinationName>
     <dataType>double</dataType>
-    <addAttributes>
-      <att name="variable_type">environmental</att>
-      <att name="units">degC</att>
-    </addAttributes>
+    <addAttributes/>
   </dataVariable>
   <dataVariable>
     <sourceName>CNDC</sourceName>
     <destinationName>CNDC</destinationName>
     <dataType>double</dataType>
-    <addAttributes>
-      <att name="variable_type">environmental</att>
-      <att name="units">S/m</att>
-    </addAttributes>
+    <addAttributes/>
   </dataVariable>
   <dataVariable>
-    <sourceName>CNDC_QC</sourceName>
-    <destinationName>CNDC_QC</destinationName>
-    <dataType>ubyte</dataType>
-    <addAttributes>
-      <att name="variable_type">quality_control</att>
-      <att name="flag_values">0 1 2 3 4 5 6 7 8 9</att>
-      <att name="flag_meanings">unknown good_data probably_good_data potentially_correctable_bad_data bad_data nominal_value interpolated_value missing_value</att>
-    </addAttributes>
+    <sourceName>PSAL</sourceName>
+    <destinationName>PSAL</destinationName>
+    <dataType>double</dataType>
+    <addAttributes/>
   </dataVariable>
   <dataVariable>
     <sourceName>PRES</sourceName>
     <destinationName>PRES</destinationName>
     <dataType>double</dataType>
-    <addAttributes>
-      <att name="variable_type">environmental</att>
-      <att name="units">dbar</att>
-    </addAttributes>
-  </dataVariable>
-  <dataVariable>
-    <sourceName>PRES_QC</sourceName>
-    <destinationName>PRES_QC</destinationName>
-    <dataType>ubyte</dataType>
-    <addAttributes>
-      <att name="variable_type">quality_control</att>
-      <att name="flag_values">0 1 2 3 4 5 6 7 8 9</att>
-      <att name="flag_meanings">unknown good_data probably_good_data potentially_correctable_bad_data bad_data nominal_value interpolated_value missing_value</att>
-    </addAttributes>
-  </dataVariable>
-  <dataVariable>
-    <sourceName>DRYT</sourceName>
-    <destinationName>DRYT</destinationName>
-    <dataType>double</dataType>
-    <addAttributes>
-      <att name="variable_type">environmental</att>
-      <att name="units">degC</att>
-    </addAttributes>
-  </dataVariable>
-  <dataVariable>
-    <sourceName>DRYT_QC</sourceName>
-    <destinationName>DRYT_QC</destinationName>
-    <dataType>ubyte</dataType>
-    <addAttributes>
-      <att name="variable_type">quality_control</att>
-      <att name="flag_values">0 1 2 3 4 5 6 7 8 9</att>
-      <att name="flag_meanings">unknown good_data probably_good_data potentially_correctable_bad_data bad_data nominal_value interpolated_value missing_value</att>
-    </addAttributes>
-  </dataVariable>
-  <dataVariable>
-    <sourceName>TIME_QC</sourceName>
-    <destinationName>TIME_QC</destinationName>
-    <dataType>ubyte</dataType>
-    <addAttributes>
-      <att name="variable_type">quality_control</att>
-      <att name="flag_values">0 1 2 3 4 5 6 7 8 9</att>
-      <att name="flag_meanings">unknown good_data probably_good_data potentially_correctable_bad_data bad_data nominal_value interpolated_value missing_value</att>
-    </addAttributes>
-  </dataVariable>
-  <dataVariable>
-    <sourceName>POSITION_QC</sourceName>
-    <destinationName>POSITION_QC</destinationName>
-    <dataType>ubyte</dataType>
-    <addAttributes>
-      <att name="variable_type">quality_control</att>
-      <att name="flag_values">0 1 2 3 4 5 6 7 8 9</att>
-      <att name="flag_meanings">unknown good_data probably_good_data potentially_correctable_bad_data bad_data nominal_value interpolated_value missing_value</att>
-    </addAttributes>
-  </dataVariable>
-  <dataVariable>
-    <sourceName>DEPTH_QC</sourceName>
-    <destinationName>DEPTH_QC</destinationName>
-    <dataType>ubyte</dataType>
-    <addAttributes>
-      <att name="variable_type">quality_control</att>
-      <att name="flag_values">0 1 2 3 4 5 6 7 8 9</att>
-      <att name="flag_meanings">unknown good_data probably_good_data potentially_correctable_bad_data bad_data nominal_value interpolated_value missing_value</att>
-    </addAttributes>
+    <addAttributes/>
   </dataVariable>
   <dataVariable>
     <sourceName>TEMP_QC</sourceName>
     <destinationName>TEMP_QC</destinationName>
     <dataType>ubyte</dataType>
-    <addAttributes>
-      <att name="variable_type">quality_control</att>
-      <att name="flag_values">0 1 2 3 4 5 6 7 8 9</att>
-      <att name="flag_meanings">unknown good_data probably_good_data potentially_correctable_bad_data bad_data nominal_value interpolated_value missing_value</att>
-    </addAttributes>
+    <addAttributes/>
   </dataVariable>
   <dataVariable>
-    <sourceName>Vaisala_HMP155_SNR0230167</sourceName>
-    <destinationName>Vaisala_HMP155_SNR0230167</destinationName>
-    <dataType>String</dataType>
-    <addAttributes>
-      <att name="variable_type">sensor</att>
-      <att name="long_name">Vaisala HMP155 hygrometer series</att>
-      <att name="sdn_instrument_name">Vaisala HMP155 hygrometer series</att>
-      <att name="sdn_instrument_uri">http://vocab.nerc.ac.uk/collection/L22/current/TOOL1673/</att>
-      <att name="sdn_instrument_urn">SDN:L22::TOOL1673</att>
-      <att name="sensor_manufacturer_name">Vaisala</att>
-      <att name="sensor_manufacturer_uri">http://vocab.nerc.ac.uk/collection/L35/current/MAN0025/</att>
-      <att name="sensor_manufacturer_urn">SDN:L35::MAN0025</att>
-      <att name="sensor_SeaVoX_L22_code">SDN:L22::TOOL1673</att>
-      <att name="sensor_mount">mounted_on_surface_buoy</att>
-      <att name="sensor_type_uri">http://vocab.nerc.ac.uk/collection/L05/current/130/</att>
-      <att name="sensor_type_urn">SDN:L05::102</att>
-      <att name="sensor_type_name">meteorological packages</att>
-      <att name="sensor_reference">http://vocab.nerc.ac.uk/collection/L22/current/TOOL1673/</att>
-      <att name="sensor_serial_number">R0230167</att>
-      <att name="sensor_id">Vaisala_HMP155_SNR0230167</att>
-    </addAttributes>
+    <sourceName>CNDC_QC</sourceName>
+    <destinationName>CNDC_QC</destinationName>
+    <dataType>ubyte</dataType>
+    <addAttributes/>
   </dataVariable>
   <dataVariable>
-    <sourceName>SBE37sm_SN37_1234</sourceName>
-    <destinationName>SBE37sm_SN37_1234</destinationName>
-    <dataType>String</dataType>
-    <addAttributes>
-      <att name="variable_type">sensor</att>
-      <att name="long_name">Sea-Bird SBE 37 MicroCat CTP (submersible) CTD sensor series</att>
-      <att name="sensor_model">Sea-Bird SBE 37 MicroCat CTP (submersible) CTD sensor series</att>
-      <att name="sensor_manufacturer_name">Sea-Bird Scientific</att>
-      <att name="sensor_manufacturer_uri">http://vocab.nerc.ac.uk/collection/L35/current/MAN0013/</att>
-      <att name="sensor_manufacturer_urn">SDN:L35::MAN0013</att>
-      <att name="sensor_type_uri">http://vocab.nerc.ac.uk/collection/L05/current/130/</att>
-      <att name="sensor_type_urn">SDN:L05::130</att>
-      <att name="sensor_type_name">CTD</att>
-      <att name="sdn_instrument_name">Sea-Bird SBE 37 MicroCat CTP (submersible) CTD sensor series</att>
-      <att name="sdn_instrument_uri">http://vocab.nerc.ac.uk/collection/L22/current/TOOL1393/</att>
-      <att name="sdn_instrument_urn">SDN:L22::TOOL1393</att>
-      <att name="sensor_SeaVoX_L22_code">SDN:L22::TOOL1393</att>
-      <att name="sensor_reference">http://vocab.nerc.ac.uk/collection/L22/current/TOOL1393/</att>
-      <att name="sensor_serial_number">37-1234</att>
-      <att name="sensor_id">SBE37sm_SN37_1234</att>
-      <att name="sensor_mount">mounted_on_mooring_line</att>
-      <att name="sensor_orientation">upward</att>
-    </addAttributes>
+    <sourceName>PSAL_QC</sourceName>
+    <destinationName>PSAL_QC</destinationName>
+    <dataType>ubyte</dataType>
+    <addAttributes/>
   </dataVariable>
   <dataVariable>
-    <sourceName>SBE16plusv2_SN16_50265</sourceName>
-    <destinationName>SBE16plusv2_SN16_50265</destinationName>
-    <dataType>String</dataType>
-    <addAttributes>
-      <att name="variable_type">sensor</att>
-      <att name="long_name">Sea-Bird SBE 16Plus V2 SEACAT C-T Recorder</att>
-      <att name="sensor_manufacturer_name">Sea-Bird Scientific</att>
-      <att name="sensor_manufacturer_uri">http://vocab.nerc.ac.uk/collection/L35/current/MAN0013/</att>
-      <att name="sensor_manufacturer_urn">SDN:L35::MAN0013</att>
-      <att name="sensor_type_uri">http://vocab.nerc.ac.uk/collection/L05/current/130/</att>
-      <att name="sensor_type_urn">SDN:L05::130</att>
-      <att name="sensor_type_name">CTD</att>
-      <att name="sensor_reference">http://vocab.nerc.ac.uk/collection/L22/current/TOOL0870/</att>
-      <att name="sdn_instrument_uri">http://vocab.nerc.ac.uk/collection/L22/current/TOOL0870/</att>
-      <att name="sdn_instrument_urn">SDN:L22::TOOL0870</att>
-      <att name="sensor_SeaVoX_L22_code">SDN:L22::TOOL0870</att>
-      <att name="sdn_instrument_name">Sea-Bird SBE 16Plus V2 SEACAT C-T Recorder</att>
-      <att name="sensor_serial_number">16-50265</att>
-      <att name="sensor_id">SBE16plusv2_SN16_50265</att>
-      <att name="sensor_mount">mounted_on_mooring_line</att>
-      <att name="sensor_orientation">upward</att>
-    </addAttributes>
+    <sourceName>PRES_QC</sourceName>
+    <destinationName>PRES_QC</destinationName>
+    <dataType>ubyte</dataType>
+    <addAttributes/>
   </dataVariable>
   <dataVariable>
-    <sourceName>SBE37sm_SN37_5669</sourceName>
-    <destinationName>SBE37sm_SN37_5669</destinationName>
+    <sourceName>SBE37SMP_SN47472_5496</sourceName>
+    <destinationName>SBE37SMP_SN47472_5496</destinationName>
     <dataType>String</dataType>
-    <addAttributes>
-      <att name="variable_type">sensor</att>
-      <att name="long_name">Sea-Bird SBE 37 MicroCat CTP (submersible) CTD sensor series</att>
-      <att name="sdn_instrument_name">Sea-Bird SBE 37 MicroCat CTP (submersible) CTD sensor series</att>
-      <att name="sdn_instrument_uri">http://vocab.nerc.ac.uk/collection/L22/current/TOOL1393/</att>
-      <att name="sdn_instrument_urn">SDN:L22::TOOL1393</att>
-      <att name="sensor_SeaVoX_L22_code">SDN:L22::TOOL1393</att>
-      <att name="sensor_manufacturer_name">Sea-Bird Scientific</att>
-      <att name="sensor_manufacturer_uri">http://vocab.nerc.ac.uk/collection/L35/current/MAN0013/</att>
-      <att name="sensor_manufacturer_urn">SDN:L35::MAN0013</att>
-      <att name="sensor_reference">http://vocab.nerc.ac.uk/collection/L22/current/TOOL1393/</att>
-      <att name="sensor_type_uri">http://vocab.nerc.ac.uk/collection/L05/current/130/</att>
-      <att name="sensor_type_urn">SDN:L05::130</att>
-      <att name="sensor_type_name">CTD</att>
-      <att name="sensor_serial_number">37-5669</att>
-      <att name="sensor_id">SBE37sm_SN37_5669</att>
-      <att name="sensor_mount">mounted_on_mooring_line</att>
-      <att name="sensor_orientation">upward</att>
-    </addAttributes>
+    <addAttributes/>
   </dataVariable>
   <dataVariable>
-    <sourceName>SBE37sm_SN37_22592</sourceName>
-    <destinationName>SBE37sm_SN37_22592</destinationName>
+    <sourceName>unknown</sourceName>
+    <destinationName>unknown</destinationName>
     <dataType>String</dataType>
-    <addAttributes>
-      <att name="variable_type">sensor</att>
-      <att name="long_name">Sea-Bird SBE 37 MicroCat CTP (submersible) CTD sensor series</att>
-      <att name="sdn_instrument_name">Sea-Bird SBE 37 MicroCat CTP (submersible) CTD sensor series</att>
-      <att name="sdn_instrument_uri">http://vocab.nerc.ac.uk/collection/L22/current/TOOL1393/</att>
-      <att name="sdn_instrument_urn">SDN:L22::TOOL1393</att>
-      <att name="sensor_SeaVoX_L22_code">SDN:L22::TOOL1393</att>
-      <att name="sensor_manufacturer_name">Sea-Bird Scientific</att>
-      <att name="sensor_manufacturer_uri">http://vocab.nerc.ac.uk/collection/L35/current/MAN0013/</att>
-      <att name="sensor_manufacturer_urn">SDN:L35::MAN0013</att>
-      <att name="sensor_type_uri">http://vocab.nerc.ac.uk/collection/L05/current/130/</att>
-      <att name="sensor_type_urn">SDN:L05::130</att>
-      <att name="sensor_type_name">CTD</att>
-      <att name="sensor_reference">http://vocab.nerc.ac.uk/collection/L22/current/TOOL1393/</att>
-      <att name="sensor_serial_number">37-22592</att>
-      <att name="sensor_id">SBE37sm_SN37_22592</att>
-      <att name="sensor_mount">mounted_on_mooring_line</att>
-      <att name="sensor_orientation">upward</att>
-    </addAttributes>
+    <addAttributes/>
   </dataVariable>
   <dataVariable>
-    <sourceName>ODASItalia1</sourceName>
-    <destinationName>ODASItalia1</destinationName>
+    <sourceName>OBSEA_seabed_station</sourceName>
+    <destinationName>OBSEA_seabed_station</destinationName>
     <dataType>String</dataType>
-    <addAttributes>
-      <att name="variable_type">platform</att>
-      <att name="long_name">ODASItalia1</att>
-      <att name="wmo_platform_code">6103675</att>
-      <att name="emso_platform_name">ODAS Italia 1</att>
-      <att name="emso_platform_uri">https://w3id.org/earthsemantics/OSO#ODASItalia1</att>
-      <att name="platform_type_name">mooring</att>
-      <att name="platform_type_uri">http://vocab.nerc.ac.uk/collection/L06/current/48/</att>
-      <att name="platform_type_urn">SDN:L06::48</att>
-      <att name="platform_reference">http://www.w1m3a.cnr.it</att>
-      <att name="platform_id">ODASItalia1</att>
-    </addAttributes>
+    <addAttributes/>
   </dataVariable>
 </dataset>
 </erddapDatasets>
