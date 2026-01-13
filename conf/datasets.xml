@@ -1772,7 +1772,7 @@ Also, 1000 ms won't annoy human users who make a bad request.
       <att name="subsetVariables">platform_id,sensor_id,depth,TIME_QC,POSITION_QC,DEPTH_QC,TEMP_QC,precise_latitude,precise_longitude</att>
       <att name="cdm_timeseries_variables">platform_id,sensor_id,latitude,longitude,depth</att>
       <att name="title">Example 14: Setup a EMSO-compliant dataset from Copernicus-like files</att>
-      <att name="summary">Example 14: Setup a EMSO-compliant dataset from Copernicus-like files. Source files from W1M3A have been slightly modified to convert the sensor_id to a string (instead of a numerical variable) and some variables have been removed</att>
+      <att name="summary">Setup a EMSO-compliant dataset from Copernicus-like files. Source files from W1M3A have been slightly modified to convert the sensor_id to a string (instead of a numerical variable) and some variables have been removed</att>
       <att name="treatDimensionsAs">LATITUDE,LONGITUDE,TIME</att>
       <att name="contributors">Bart Simpson, Peter Griffin, Rick Sánchez</att>
       <att name="contributor_types">DataCollector DataManager Researcher</att>
@@ -1780,6 +1780,9 @@ Also, 1000 ms won't annoy human users who make a bad request.
       <att name="emso_regional_facility_uri">https://w3id.org/earthsemantics/OSO#Western_Mediterranean_Sea</att>
       <att name="emso_site_name">W1M3A</att>
       <att name="emso_site_uri">https://w3id.org/earthsemantics/OSO#W1M3A</att>
+      <att name="doi">10.5281/zenodo.13141951 10.5281/zenodo.8421765</att>
+      <att name="project">AMRIT MINKE</att>
+      <att name="project_codes">101132013 101008724</att>
     </addAttributes>
     <dataVariable>
       <sourceName>TIME</sourceName>
