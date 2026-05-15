@@ -481,7 +481,7 @@ Also, 1000 ms won't annoy human users who make a bad request.
       <att name="infoUrl">https://edmo.seadatanet.org/report/5229</att>
       <att name="sourceUrl">(local files)</att>
       <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
-      <att name="subsetVariables">platform_id,sensor_id,depth,TEMP_QC,CNDC_QC,PRES_QC,AIRT_QC,WSPD_QC,WDIR_QC</att>
+      <att name="subsetVariables">platform_id,sensor_id,depth,TEMP_QC,CNDC_QC,PRES_QC,PSAL_QC,AIRT_QC,WSPD_QC,WDIR_QC</att>
       <att name="cdm_timeseries_variables">platform_id,sensor_id,latitude,longitude,depth</att>
     </addAttributes>
     <dataVariable>
@@ -577,6 +577,12 @@ Also, 1000 ms won't annoy human users who make a bad request.
     <dataVariable>
       <sourceName>PRES_QC</sourceName>
       <destinationName>PRES_QC</destinationName>
+      <dataType>ubyte</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
+      <sourceName>PSAL_QC</sourceName>
+      <destinationName>PSAL_QC</destinationName>
       <dataType>ubyte</dataType>
       <addAttributes/>
     </dataVariable>
@@ -1557,6 +1563,12 @@ Also, 1000 ms won't annoy human users who make a bad request.
       <addAttributes/>
     </dataVariable>
     <dataVariable>
+      <sourceName>time_end</sourceName>
+      <destinationName>time_end</destinationName>
+      <dataType>double</dataType>
+      <addAttributes/>
+    </dataVariable>
+    <dataVariable>
       <sourceName>NOYS</sourceName>
       <destinationName>NOYS</destinationName>
       <dataType>String</dataType>
@@ -1618,29 +1630,38 @@ Also, 1000 ms won't annoy human users who make a bad request.
     <dataVariable>
       <sourceName>nominal_latitude</sourceName>
       <destinationName>latitude</destinationName>
-      <dataType>float</dataType>
+      <dataType>double</dataType>
       <addAttributes>
+        <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/ALATZZ01/</att>
+        <att name="sdn_parameter_urn">SDN:P01::ALATZZ01</att>
+        <att name="sdn_parameter_name">Latitude north</att>
         <att name="standard_name">latitude</att>
         <att name="units">degrees_north</att>
-        <att name="variable_type">coordinates</att>
+        <att name="variable_type">coordinate</att>
       </addAttributes>
     </dataVariable>
     <dataVariable>
       <sourceName>nominal_longitude</sourceName>
       <destinationName>longitude</destinationName>
-      <dataType>float</dataType>
+      <dataType>double</dataType>
       <addAttributes>
+        <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/ALONZZ01/</att>
+        <att name="sdn_parameter_urn">SDN:P01::ALONZZ01</att>
+        <att name="sdn_parameter_name">Longitude east</att>
         <att name="standard_name">longitude</att>
         <att name="units">degrees_east</att>
-        <att name="variable_type">coordinates</att>
+        <att name="variable_type">coordinate</att>
       </addAttributes>
     </dataVariable>
     <dataVariable>
       <sourceName>SENSOR_ID</sourceName>
       <destinationName>sensor_id</destinationName>
-      <dataType>float</dataType>
+      <dataType>String</dataType>
       <addAttributes>
-        <att name="variable_type">coordinates</att>
+        <att name="sdn_parameter_uri">http://vocab.nerc.ac.uk/collection/P01/current/NMSPINST/</att>
+        <att name="sdn_parameter_urn">SDN:P01::NMSPINST</att>
+        <att name="sdn_parameter_name">Name of sampling instrument</att>
+        <att name="variable_type">coordinate</att>
       </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -1648,7 +1669,7 @@ Also, 1000 ms won't annoy human users who make a bad request.
       <destinationName>platform_id</destinationName>
       <dataType>String</dataType>
       <addAttributes>
-        <att name="variable_type">coordinates</att>
+        <att name="variable_type">coordinate</att>
       </addAttributes>
     </dataVariable>
     <dataVariable>
@@ -1657,6 +1678,9 @@ Also, 1000 ms won't annoy human users who make a bad request.
       <dataType>float</dataType>
       <addAttributes>
         <att name="standard_name">deployment_latitude</att>
+        <att name="sdn_parameter_uri">https://vocab.nerc.ac.uk/collection/P01/current/ALATCN01</att>
+        <att name="sdn_parameter_urn">SDN:P01::ALATCN01</att>
+        <att name="sdn_parameter_name">Latitude north by combined Global Navigation Satellite System receiver</att>
         <att name="ancillary_variables">POSITION_QC</att>
       </addAttributes>
     </dataVariable>
@@ -1666,6 +1690,9 @@ Also, 1000 ms won't annoy human users who make a bad request.
       <dataType>float</dataType>
       <addAttributes>
         <att name="standard_name">deployment_longitude</att>
+        <att name="sdn_parameter_uri">https://vocab.nerc.ac.uk/collection/P01/current/ALONCN01</att>
+        <att name="sdn_parameter_urn">SDN:P01::ALONCN01</att>
+        <att name="sdn_parameter_name">Longitude east by combined Global Navigation Satellite System receiver</att>
         <att name="ancillary_variables">POSITION_QC</att>
       </addAttributes>
     </dataVariable>
@@ -1772,6 +1799,7 @@ Also, 1000 ms won't annoy human users who make a bad request.
       <att name="subsetVariables">platform_id,sensor_id,depth,TIME_QC,POSITION_QC,DEPTH_QC,TEMP_QC,precise_latitude,precise_longitude</att>
       <att name="cdm_timeseries_variables">platform_id,sensor_id,latitude,longitude,depth</att>
       <att name="title">Example 14: Setup a EMSO-compliant dataset from Copernicus-like files</att>
+      <att name="institution">CNR - Consiglio Nazionale delle Ricerche</att>
       <att name="summary">Setup a EMSO-compliant dataset from Copernicus-like files. Source files from W1M3A have been slightly modified to convert the sensor_id to a string (instead of a numerical variable) and some variables have been removed</att>
       <att name="treatDimensionsAs">LATITUDE,LONGITUDE,TIME</att>
       <att name="contributors">Bart Simpson, Peter Griffin, Rick Sánchez</att>
@@ -1781,8 +1809,18 @@ Also, 1000 ms won't annoy human users who make a bad request.
       <att name="emso_site_name">W1M3A</att>
       <att name="emso_site_uri">https://w3id.org/earthsemantics/OSO#W1M3A</att>
       <att name="doi">10.5281/zenodo.13141951 10.5281/zenodo.8421765</att>
-      <att name="project">AMRIT MINKE</att>
-      <att name="project_codes">101132013 101008724</att>
+      <att name="project">MINKE AMRIT</att>
+      <att name="project_code">101008724 101132013</att>
+      <att name="project_uri">https://cordis.europa.eu/project/id/101008724 https://cordis.europa.eu/project/id/101132013</att>
+      <att name="data_processing_level">L1</att>
+      <att name="data_processing_steps">L0a L1a L1b</att>
+      <att name="contributor_name">Roberto Bozzano, Sara Pensieri</att>
+      <att name="contributor_role">Editor Editor</att>
+      <att name="keywords">Earth Science &gt; Oceans, physical oceanography</att>
+      <att name="keywords_uri">https://cmr.earthdata.nasa.gov/kms/concept/91697b7d-8f2b-4954-850e-61d5f61c867d http://www.eionet.europa.eu/gemet/concept/6224</att>
+      <att name="keywords_type">discipline, discipline</att>
+      <att name="keywords_vocabulary">GCMD Science Keywords, GEMET</att>
+      <att name="keywords_vocabulary_uri">https://gcmd.earthdata.nasa.gov/ https://www.eionet.europa.eu/gemet/</att>
     </addAttributes>
     <dataVariable>
       <sourceName>TIME</sourceName>
@@ -1811,7 +1849,7 @@ Also, 1000 ms won't annoy human users who make a bad request.
         <att name="sdn_parameter_name">Latitude north</att>
         <att name="sdn_parameter_urn">SDN:P01::ALATZZ01</att>
         <att name="sdn_uom_uri">http://vocab.nerc.ac.uk/collection/P06/current/UAAA/</att>
-        <att name="sdn_uom_urn">SDN:P06::UAAA/</att>
+        <att name="sdn_uom_urn">SDN:P06::UAAA</att>
         <att name="sdn_uom_name">Degrees</att>
         <att name="units">degrees_north</att>
       </addAttributes>
@@ -1866,13 +1904,6 @@ Also, 1000 ms won't annoy human users who make a bad request.
       <addAttributes>
         <att name="standard_name">deployment_latitude</att>
         <att name="variable_type">coordinate</att>
-        <att name="sdn_parameter_uri">https://vocab.nerc.ac.uk/collection/P01/current/ALONZZ01</att>
-        <att name="sdn_uom_uri">http://vocab.nerc.ac.uk/collection/P06/current/UAAA/</att>
-        <att name="units">degrees_east</att>
-        <att name="sdn_parameter_urn">SDN:P01::ALONZZ01</att>
-        <att name="sdn_parameter_name">Longitude east</att>
-        <att name="sdn_uom_urn">SDN:P06::UAAA</att>
-        <att name="sdn_uom_name">Degrees</att>
       </addAttributes>
     </dataVariable>
     <dataVariable>
